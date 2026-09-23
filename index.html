@@ -2057,7 +2057,6 @@ const PAGES_LIVE = false;
     document.documentElement.lang = LANGS[lang].html;
     document.querySelector('.lang-code').textContent = LANGS[lang].code;
     langMenu.querySelectorAll('[data-lang]').forEach(b => b.setAttribute('aria-checked', String(b.dataset.lang === lang)));
-    if(save){ try{ localStorage.setItem('tul-lang', lang); }catch(e){} }
     if(window.ScrollTrigger) requestAnimationFrame(() => ScrollTrigger.refresh());
   }
   function setLangMenu(open){
@@ -2071,11 +2070,8 @@ const PAGES_LIVE = false;
   });
   document.addEventListener('click', e => { if(!langMenu.hidden && !e.target.closest('.lang')) setLangMenu(false); });
   document.addEventListener('keydown', e => { if(e.key === 'Escape' && !langMenu.hidden){ setLangMenu(false); langBtn.focus(); } });
-  // Idioma inicial: escolha guardada → idioma do navegador → inglês
-  let initial = null;
-  try{ initial = localStorage.getItem('tul-lang'); }catch(e){}
-  if(!initial){ const nav = (navigator.language || 'en').slice(0,2).toLowerCase(); initial = LANGS[nav] ? nav : 'en'; }
-  if(initial !== 'en') applyLang(initial, false);
+  // Idioma inicial: SEMPRE inglês (versão principal). Os outros idiomas só pelo seletor.
+  try{ localStorage.removeItem('tul-lang'); }catch(e){}
 
   /* ---- Digitação: a última palavra é escrita e o cursor fica a piscar ---- */
   const typeEl = document.querySelector('[data-type]');
