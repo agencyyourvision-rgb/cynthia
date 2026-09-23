@@ -1,0 +1,2227 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The University Launchpad</title>
+<meta name="description" content="Personal guidance for students and families navigating the journey to university: choosing a course and universities, entry requirements, applications, deadlines, scholarships and the final decision.">
+<!-- PENDENTE: domínio final. Descomentar quando o domínio estiver definido. -->
+<!-- <link rel="canonical" href="https://DOMINIO-PENDENTE/"> -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The University Launchpad">
+<meta property="og:title" content="The University Launchpad">
+<meta property="og:description" content="University is a big decision. You don't have to figure it all out on your own.">
+<!-- PENDENTE: og-image.jpg real (1200×630) + og:url com o domínio final -->
+<!-- Trocar DOMINIO-PENDENTE pelo domínio final e descomentar (a og-image.jpg já está na pasta). -->
+<!-- <meta property="og:image" content="https://DOMINIO-PENDENTE/og-image.jpg"> -->
+<!-- <meta property="og:url" content="https://DOMINIO-PENDENTE/"> -->
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:title" content="The University Launchpad">
+<meta name="twitter:description" content="University is a big decision. You don't have to figure it all out on your own.">
+<meta name="theme-color" content="#F4F5F7">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "The University Launchpad",
+  "description": "Personal guidance for students and families navigating the journey to university.",
+  "founder": { "@type": "Person", "name": "Cynthia Pekarovic" },
+  "knowsAbout": ["Choosing a university", "Choosing a degree", "University applications", "Application deadlines", "University scholarships", "Morrisby Profile"]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+/* =========================================================
+   THE UNIVERSITY LAUNCHPAD — Home
+   Identidade: branco gelo + grafite + um acento (coral).
+   Para trocar a identidade, mexer só nestes tokens.
+   ========================================================= */
+:root{
+  color-scheme:light;
+  --bg:#F4F5F7;            /* branco gelo */
+  --bg-2:#ECEEF1;          /* cinza muito claro (cards sem borda) */
+  --white:#FFFFFF;
+  --ink:#1C1C1E;           /* grafite */
+  --ink-2:#3A3A3C;
+  --dim:#6E6E73;
+  --faint:#A1A1A6;
+  --hair:rgba(28,28,30,.07);
+  --hair-2:rgba(28,28,30,.12);
+  --accent:#F2613F;        /* acento da marca — usar com moderação */
+  --accent-soft:#FDEAE4;
+  /* cor por serviço */
+  --c-consult:#F2613F; --c-consult-soft:#FDE9E3;
+  --c-member:#3F7FF2;  --c-member-soft:#E5EEFE;
+  --c-morris:#8A63EE;  --c-morris-soft:#EEE8FD;
+  --peach:#FFF3EC; --peach-2:#FCEEF1;
+  --btn-bg:#1C1C1E; --btn-ink:#FFFFFF;
+  --ghost-bg:rgba(255,255,255,.7); --ghost-hover:#FFFFFF;
+  --tag-bg:rgba(255,255,255,.75);
+  --glass-1:rgba(255,255,255,.78); --glass-2:rgba(255,255,255,.46);
+  --glass-top:rgba(255,255,255,.95); --glass-edge:rgba(255,255,255,.55); --glass-shine:rgba(255,255,255,.75);
+  --pending:#A86A0B;
+  --pending-bg:rgba(232,166,52,.12);
+
+  /* auras (só por trás de vidro) */
+  --aura-1:rgba(255,190,165,.55);
+  --aura-2:rgba(178,208,255,.55);
+  --aura-3:rgba(214,200,255,.45);
+
+  /* profundidade */
+  --sh-1:0 1px 2px rgba(20,24,32,.04), 0 6px 20px -12px rgba(20,24,32,.10);
+  --sh-2:0 1px 2px rgba(20,24,32,.04), 0 18px 48px -24px rgba(20,24,32,.18);
+  --sh-3:0 2px 6px rgba(20,24,32,.05), 0 30px 70px -30px rgba(20,24,32,.25);
+
+  --r-xs:12px; --r-sm:18px; --r:24px; --r-lg:32px; --r-xl:40px;
+  --f:"Geist", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  --f-mono:"Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --wrap:1200px;
+  --gutter:clamp(16px, 4vw, 40px);
+  --ease:cubic-bezier(.22,.8,.2,1);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth; -webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:var(--f); font-size:1.0625rem; line-height:1.55; letter-spacing:-.005em;
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+img{max-width:100%; display:block}
+a{color:inherit}
+h1,h2,h3,h4{margin:0; font-weight:600; letter-spacing:-.035em; line-height:1.03; text-wrap:balance}
+p{margin:0; text-wrap:pretty}
+ul{margin:0; padding:0; list-style:none}
+:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:8px}
+
+.wrap{max-width:var(--wrap); margin-inline:auto; padding-inline:var(--gutter)}
+section{scroll-margin-top:96px}
+.section{padding-block:clamp(88px, 12vw, 160px)}
+.center{text-align:center; margin-inline:auto}
+
+/* ---------- Tipografia ---------- */
+.t-hero{font-size:clamp(2.7rem, 1.2rem + 5.6vw, 5.8rem); font-weight:620; letter-spacing:-.045em; line-height:.98}
+.t-xl{font-size:clamp(2.4rem, 1.2rem + 4.4vw, 4.8rem); letter-spacing:-.042em; line-height:1}
+.t-l{font-size:clamp(2rem, 1.2rem + 2.9vw, 3.5rem)}
+.t-m{font-size:clamp(1.45rem, 1.1rem + 1.1vw, 2rem); letter-spacing:-.028em; line-height:1.1}
+.grey{color:var(--faint)}
+.lede{font-size:clamp(1.1rem, 1rem + .4vw, 1.3rem); color:var(--dim); line-height:1.5; max-width:34em}
+.small{font-size:.92rem; color:var(--dim)}
+
+/* tag → headline → texto → CTA */
+.tag{
+  display:inline-flex; align-items:center; gap:8px; padding:7px 13px 7px 11px; border-radius:999px;
+  background:var(--tag-bg); box-shadow:inset 0 0 0 1px var(--hair), 0 1px 2px rgba(20,24,32,.04);
+  font-size:.8rem; font-weight:500; color:var(--ink-2); letter-spacing:0; white-space:nowrap;
+}
+.tag::before{content:""; width:6px; height:6px; border-radius:50%; background:var(--accent)}
+.stack{display:flex; flex-direction:column; gap:22px}
+.stack > .tag{align-self:flex-start}
+.stack.center > .tag{align-self:center}
+.stack.center{align-items:center}
+
+.mono{font-family:var(--f-mono); font-size:.7rem; font-weight:500; letter-spacing:.08em; text-transform:uppercase; color:var(--dim)}
+
+/* ---------- Botões ---------- */
+.btns{display:flex; flex-wrap:wrap; gap:10px; align-items:center}
+.btns.center{justify-content:center}
+.btn{
+  display:inline-flex; align-items:center; gap:.5em; min-height:48px; padding:0 22px; border-radius:999px;
+  background:var(--btn-bg); color:var(--btn-ink); border:0; font:500 .98rem/1 var(--f); letter-spacing:-.01em;
+  text-decoration:none; cursor:pointer;
+  transition:transform .35s var(--ease), background-color .3s ease, box-shadow .35s var(--ease);
+}
+.btn:hover{transform:translateY(-1px) scale(1.015); box-shadow:0 12px 26px -14px rgba(20,24,32,.55)}
+.btn--ghost{background:var(--ghost-bg); color:var(--ink); box-shadow:inset 0 0 0 1px var(--hair-2)}
+.btn--ghost:hover{background:var(--ghost-hover); box-shadow:inset 0 0 0 1px var(--hair-2), 0 10px 24px -16px rgba(20,24,32,.3)}
+.btn--sm{min-height:38px; padding:0 16px; font-size:.88rem}
+.arrow{display:inline-block; transition:transform .35s var(--ease)}
+a:hover .arrow{transform:translateX(4px)}
+.link{display:inline-flex; align-items:center; gap:.4em; font-weight:500; text-decoration:none; color:var(--ink)}
+.link .arrow{color:var(--accent)}
+
+/* ---------- Superfícies ---------- */
+.card{background:var(--white); border-radius:var(--r-lg); box-shadow:var(--sh-1)}
+.card--flat{background:var(--bg-2); border-radius:var(--r-lg)}
+.container{background:var(--white); border-radius:var(--r-xl); box-shadow:var(--sh-1)}
+
+/* Vidro: translúcido, com reflexo que segue o cursor */
+.glass{
+  position:relative; isolation:isolate;
+  background:linear-gradient(150deg, var(--glass-1) 0%, var(--glass-2) 100%);
+  -webkit-backdrop-filter:blur(22px) saturate(1.7); backdrop-filter:blur(22px) saturate(1.7);
+  box-shadow:
+    inset 0 1px 0 var(--glass-top),
+    inset 0 0 0 1px var(--glass-edge),
+    inset 0 -1px 0 rgba(20,24,32,.04),
+    0 1px 2px rgba(20,24,32,.05),
+    0 14px 36px -18px rgba(20,24,32,.22);
+}
+.glass::after{
+  content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none; z-index:-1;
+  background:radial-gradient(180px circle at var(--gx,30%) var(--gy,0%), var(--glass-shine), transparent 60%);
+  opacity:.55; transition:opacity .4s ease;
+}
+.glass:hover::after{opacity:1}
+
+/* Aura suave por trás do vidro */
+.aura{position:absolute; inset:0; pointer-events:none; z-index:0; overflow:hidden; border-radius:inherit}
+.aura::before{
+  content:""; position:absolute; inset:-20%;
+  background:
+    radial-gradient(38% 42% at 22% 30%, var(--aura-1), transparent 70%),
+    radial-gradient(40% 44% at 80% 26%, var(--aura-2), transparent 70%),
+    radial-gradient(36% 40% at 58% 82%, var(--aura-3), transparent 70%);
+  filter:blur(30px);
+}
+
+/* Pendentes (conteúdo que falta da Cynthia) */
+.pending{
+  display:inline-flex; align-items:center; gap:.5em; padding:.32em .75em; border-radius:999px;
+  font-family:var(--f-mono); font-size:.66rem; font-weight:500; letter-spacing:.06em; text-transform:uppercase;
+  color:var(--pending); background:var(--pending-bg); white-space:nowrap;
+}
+.pending::before{content:""; width:5px; height:5px; border-radius:50%; background:currentColor}
+.example{
+  display:inline-flex; align-items:center; gap:6px; padding:5px 10px; border-radius:999px;
+  background:var(--bg-2); color:var(--dim); font-family:var(--f-mono); font-size:.64rem; letter-spacing:.08em; text-transform:uppercase;
+}
+
+/* =========================================================
+   SECÇÕES INVERTIDAS (fundo escuro) — ritmo e contraste
+   ========================================================= */
+.theme-dark{
+  color-scheme:dark;
+  --bg:#0B0B0D; --bg-2:#161618; --white:#1C1C1F;
+  --ink:#F5F5F7; --ink-2:#D1D1D6; --dim:#A1A1A6; --faint:#86868B;
+  --hair:rgba(255,255,255,.08); --hair-2:rgba(255,255,255,.16);
+  --btn-bg:#F5F5F7; --btn-ink:#1C1C1E;
+  --ghost-bg:rgba(255,255,255,.08); --ghost-hover:rgba(255,255,255,.14);
+  --tag-bg:rgba(255,255,255,.08);
+  --glass-1:rgba(255,255,255,.14); --glass-2:rgba(255,255,255,.05);
+  --glass-top:rgba(255,255,255,.22); --glass-edge:rgba(255,255,255,.10); --glass-shine:rgba(255,255,255,.18);
+  --aura-1:rgba(242,97,63,.30); --aura-2:rgba(90,130,255,.26); --aura-3:rgba(150,110,255,.22);
+  --sh-1:0 1px 0 rgba(255,255,255,.04) inset, 0 20px 40px -24px rgba(0,0,0,.6);
+  --sh-2:0 1px 0 rgba(255,255,255,.05) inset, 0 24px 50px -24px rgba(0,0,0,.7);
+  background:var(--bg); color:var(--ink);
+}
+.band-dark{margin-inline:clamp(8px,1.2vw,16px); border-radius:clamp(28px,4vw,48px); position:relative; overflow:hidden}
+.band-dark + .band-dark{margin-top:12px}
+.problem.band-dark{margin-top:clamp(56px,8vw,112px)}
+.problem.band-dark{padding-bottom:clamp(56px,7vw,96px)}
+.solution.band-dark .aura{opacity:.8}
+.solution.band-dark > .wrap{position:relative; z-index:1}
+.final-card.theme-dark{background:var(--bg); box-shadow:none}
+
+/* Header sobre secção escura → vidro escuro */
+.header .header-bar, .header .logo, .header .nav a, .header .lang-btn, .header .header-cta, .header .menu-btn{transition:background-color .4s ease, color .4s ease, box-shadow .4s ease}
+.header.on-dark .header-bar, .header.is-scrolled.on-dark .header-bar{
+  background:rgba(24,24,27,.58);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.10), inset 0 0 0 1px rgba(255,255,255,.06), 0 10px 30px -18px rgba(0,0,0,.6);
+}
+.header.on-dark .logo{color:#F5F5F7}
+.header.on-dark .logo-mark{color:#F5F5F7}
+.header.on-dark .nav a{color:#C7C7CC}
+.header.on-dark .nav a:hover{color:#FFFFFF}
+.header.on-dark .lang-btn{background:rgba(255,255,255,.10); color:#F5F5F7; box-shadow:inset 0 0 0 1px rgba(255,255,255,.10)}
+.header.on-dark .header-cta{background:#F5F5F7; color:#1C1C1E}
+.header.on-dark .menu-btn{background:rgba(255,255,255,.10); box-shadow:inset 0 0 0 1px rgba(255,255,255,.10)}
+.header.on-dark .menu-btn span, .header.on-dark .menu-btn span::before{background:#F5F5F7}
+.menu-open .header.on-dark .menu-btn span{background:#1C1C1E}
+
+/* =========================================================
+   SELETOR DE IDIOMA
+   ========================================================= */
+.lang{position:relative; flex-shrink:0}
+.lang-btn{
+  display:inline-flex; align-items:center; gap:6px; height:38px; padding:0 12px 0 11px; border-radius:999px; border:0; cursor:pointer;
+  background:var(--tag-bg); box-shadow:inset 0 0 0 1px var(--hair); color:var(--ink); font:500 .8rem/1 var(--f); letter-spacing:.02em;
+  transition:background-color .25s ease;
+}
+.lang-btn:hover{background:#fff}
+.lang-btn svg:last-child{transition:transform .3s var(--ease)}
+.lang-btn[aria-expanded="true"] svg:last-child{transform:rotate(180deg)}
+.lang-menu{
+  position:absolute; right:0; top:calc(100% + 10px); min-width:180px; padding:6px; border-radius:18px; z-index:60;
+  display:grid; gap:2px;
+  --glass-1:rgba(255,255,255,.92); --glass-2:rgba(255,255,255,.78);
+}
+.lang-menu button{
+  display:flex; justify-content:space-between; align-items:center; gap:12px; width:100%;
+  padding:11px 12px; border-radius:12px; border:0; background:none; cursor:pointer; text-align:left;
+  font:500 .92rem/1 var(--f); color:var(--ink); letter-spacing:-.01em;
+}
+.lang-menu button small{font-family:var(--f-mono); font-size:.66rem; color:var(--faint); letter-spacing:.06em}
+.lang-menu button:hover{background:rgba(28,28,30,.05)}
+.lang-menu button[aria-checked="true"] small{color:var(--accent)}
+
+/* =========================================================
+   HEADER — cápsula de vidro
+   ========================================================= */
+.header{position:sticky; top:calc(env(safe-area-inset-top, 0px) + 12px); z-index:50; padding-inline:var(--gutter)}
+.header-bar{
+  max-width:var(--wrap); margin-inline:auto; height:60px; border-radius:999px;
+  display:flex; align-items:center; gap:20px; padding:0 8px 0 18px;
+  background:rgba(244,245,247,.0); transition:background-color .4s ease, box-shadow .4s ease, backdrop-filter .4s ease;
+}
+.header.is-scrolled .header-bar{
+  background:rgba(255,255,255,.66);
+  -webkit-backdrop-filter:blur(22px) saturate(1.8); backdrop-filter:blur(22px) saturate(1.8);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.9), inset 0 0 0 1px rgba(255,255,255,.5), 0 10px 30px -18px rgba(20,24,32,.25);
+}
+.logo{display:inline-flex; align-items:center; gap:10px; text-decoration:none; font-weight:600; font-size:.98rem; letter-spacing:-.025em; white-space:nowrap; flex-shrink:0}
+.logo-mark{width:26px; height:26px; color:var(--ink); display:grid; place-items:center; flex-shrink:0; transform:rotate(12deg); transition:transform .5s var(--ease)}
+.logo:hover .logo-mark{transform:rotate(12deg) translateY(-2px)}
+.nav{display:flex; gap:clamp(14px, 1.8vw, 28px); margin-left:auto}
+.nav a{font-size:.86rem; color:var(--ink-2); text-decoration:none; white-space:nowrap; transition:color .25s ease}
+.nav a:hover{color:var(--ink)}
+.header-cta{flex-shrink:0}
+.menu-btn{display:none; margin-left:auto; width:42px; height:42px; border-radius:50%; border:0; background:rgba(255,255,255,.8); box-shadow:inset 0 0 0 1px var(--hair); cursor:pointer; place-items:center}
+.menu-btn span, .menu-btn span::before{display:block; width:16px; height:1.5px; background:var(--ink); border-radius:2px; transition:transform .35s var(--ease)}
+.menu-btn span{position:relative; transform:translateY(-3px)}
+.menu-btn span::before{content:""; position:absolute; left:0; top:6px; transform:none}
+.menu-open .menu-btn span{transform:rotate(45deg)}
+.menu-open .menu-btn span::before{transform:translateY(-6px) rotate(-90deg)}
+.mobile-menu{
+  position:fixed; inset:0; z-index:40;
+  background:rgba(244,245,247,.86); -webkit-backdrop-filter:blur(26px) saturate(1.6); backdrop-filter:blur(26px) saturate(1.6);
+  padding:calc(env(safe-area-inset-top, 0px) + 96px) var(--gutter) calc(32px + env(safe-area-inset-bottom, 0px));
+  display:flex; flex-direction:column; gap:28px; overflow-y:auto;
+}
+.mobile-menu nav{display:flex; flex-direction:column}
+.mobile-menu nav a{font-size:1.75rem; font-weight:600; letter-spacing:-.035em; text-decoration:none; padding:10px 0}
+.mobile-menu .btn{align-self:flex-start}
+@media (max-width:1060px){
+  .nav{display:none}
+  .menu-btn{display:grid; margin-left:0}
+  .header-bar{gap:8px}
+  .lang{margin-left:auto}
+}
+@media (max-width:400px){ .logo{font-size:.9rem} .logo-mark{width:26px;height:26px} }
+@media (max-width:460px){ .header-cta{display:none} }
+
+/* =========================================================
+   01 HERO — perguntas soltas (confusão)
+   ========================================================= */
+.hero{position:relative; padding-block:clamp(56px, 9vw, 110px) clamp(72px, 9vw, 120px)}
+.hero .aura{opacity:.8; inset:-10% 0 0}
+.hero .aura::before{inset:0}
+.hero-inner{position:relative; z-index:1; min-height:clamp(480px, 58vw, 640px); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center}
+.hero h1{max-width:13ch}
+.hero h1 .grey{display:block; font-size:.62em; letter-spacing:-.035em; line-height:1.08; margin-top:.35em; max-width:20ch; margin-inline:auto}
+.hero .lede{margin-top:26px; text-align:center}
+.hero .btns{margin-top:34px}
+
+.floaters{position:absolute; inset:0; pointer-events:none}
+.floater{position:absolute; pointer-events:auto}
+.q{
+  display:inline-flex; align-items:center; gap:10px; padding:12px 18px 12px 14px; border-radius:18px;
+  font-size:1rem; font-weight:500; letter-spacing:-.015em; white-space:nowrap; color:var(--ink);
+  animation:bob var(--dur,8s) ease-in-out infinite;
+}
+.q::before{content:""; width:8px; height:8px; border-radius:50%; background:var(--faint); flex-shrink:0}
+.q--hot::before{background:var(--accent)}
+@keyframes bob{
+  0%,100%{transform:translate(0,0) rotate(var(--rot,0deg))}
+  30%{transform:translate(7px,-14px) rotate(calc(var(--rot,0deg) + 2deg))}
+  65%{transform:translate(-6px,-5px) rotate(calc(var(--rot,0deg) - 1.5deg))}
+}
+@media (max-width:1180px){
+  .floaters{position:static; display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:44px; max-width:560px}
+  .floater{position:static}
+  .q{font-size:.9rem; padding:10px 14px 10px 12px}
+  .hero-inner{min-height:0}
+}
+
+/* =========================================================
+   02 ESTUDANTE — bento de pensamentos
+   ========================================================= */
+.head-row{display:grid; grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr); gap:clamp(24px,4vw,72px); align-items:end}
+.thoughts{margin-top:clamp(44px,6vw,72px); display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:14px}
+.thought{
+  grid-column:span 4; min-height:150px; padding:26px; border-radius:var(--r);
+  background:var(--white); box-shadow:var(--sh-1);
+  display:flex; flex-direction:column; justify-content:space-between; gap:18px;
+  transition:transform .5s var(--ease), box-shadow .5s var(--ease);
+}
+.thought:hover{transform:translateY(-4px); box-shadow:var(--sh-2)}
+.thought p{font-size:clamp(1.25rem, 1.05rem + .7vw, 1.65rem); font-weight:560; letter-spacing:-.03em; line-height:1.15}
+.thought .mono{color:var(--faint)}
+.thought--wide{grid-column:span 5}
+.thought--narrow{grid-column:span 3}
+.thought--big{
+  grid-column:span 7; position:relative; overflow:hidden; background:var(--white);
+}
+.thought--big .aura{opacity:.7}
+.thought--big .inner{position:relative; z-index:1; display:flex; flex-direction:column; justify-content:space-between; height:100%; gap:18px}
+.thought--big p{font-size:clamp(1.7rem,1.2rem + 1.8vw,2.6rem)}
+.bubble-tail{align-self:flex-start; padding:10px 14px; border-radius:16px 16px 16px 4px; font-size:.9rem; color:var(--ink-2)}
+@media (max-width:900px){
+  .head-row{grid-template-columns:1fr}
+  .thought, .thought--wide, .thought--narrow{grid-column:span 6}
+  .thought--big{grid-column:span 12}
+}
+@media (max-width:560px){
+  .thoughts{grid-auto-flow:column; grid-template-columns:none; grid-auto-columns:78%; overflow-x:auto; scroll-snap-type:x mandatory; padding:4px var(--gutter) 24px; margin-inline:calc(var(--gutter) * -1); scrollbar-width:none}
+  .thoughts::-webkit-scrollbar{display:none}
+  .thought, .thought--wide, .thought--narrow, .thought--big{grid-column:auto; scroll-snap-align:center; min-height:180px}
+}
+
+/* =========================================================
+   04 O PROBLEMA — ruído → foco
+   ========================================================= */
+.noise{
+  position:relative; margin-top:clamp(40px,6vw,64px); height:clamp(300px,30vw,380px);
+  border-radius:var(--r-xl); background:var(--bg-2); overflow:hidden;
+}
+.n{
+  position:absolute; transform:translate(-50%,-50%) rotate(var(--r,0deg));
+  padding:.55em 1em; border-radius:999px; background:var(--white);
+  font-size:clamp(.78rem,.7rem + .3vw,.95rem); font-weight:500; white-space:nowrap; color:var(--ink-2);
+  box-shadow:inset 0 0 0 1px var(--hair), 0 1px 2px rgba(20,24,32,.05);
+}
+.n--far{opacity:.45; filter:blur(1.2px)}
+.n--doc{border-radius:10px; font-family:var(--f-mono); font-size:clamp(.68rem,.64rem + .2vw,.8rem); color:var(--dim)}
+.noise::after{content:""; position:absolute; inset:0; background:linear-gradient(180deg, transparent 50%, var(--bg-2) 96%); pointer-events:none}
+
+.focus{
+  margin-top:14px; border-radius:var(--r-xl); background:var(--white); box-shadow:var(--sh-1);
+  padding:clamp(28px,5vw,64px); display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr); gap:clamp(28px,5vw,72px); align-items:center;
+}
+.focus h3{font-size:clamp(1.9rem,1.25rem + 2.4vw,3.2rem)}
+.focus h3 em{font-style:normal; background:linear-gradient(var(--accent),var(--accent)) no-repeat 0 100% / 0% 3px; transition:background-size 1.2s var(--ease); padding-bottom:2px}
+.focus h3 em.is-lit{background-size:100% 3px}
+.applies{display:grid; gap:8px}
+.applies li{
+  display:flex; align-items:center; gap:14px; padding:16px 18px; border-radius:16px; background:var(--bg);
+  font-weight:500; letter-spacing:-.015em; font-size:1.05rem;
+}
+.applies li i{width:24px; height:24px; border-radius:50%; background:var(--btn-bg); color:var(--btn-ink); display:grid; place-items:center; flex-shrink:0}
+@media (max-width:820px){ .focus{grid-template-columns:1fr} }
+
+/* =========================================================
+   05 DESEJO — as perguntas organizam-se (DNA visual)
+   ========================================================= */
+.plan{position:relative}
+.plan-pin{padding-block:clamp(64px,7vw,96px) clamp(40px,6vw,72px)}
+.plan-head{text-align:center; display:flex; flex-direction:column; align-items:center; gap:18px}
+.plan-head h2{max-width:15ch}
+.plan-canvas{position:relative; margin-top:clamp(28px,4vw,48px); border-radius:var(--r-xl)}
+.plan-canvas > .aura{opacity:.9; inset:-4% -2%}
+.app{
+  position:relative; z-index:1; max-width:920px; margin-inline:auto; border-radius:var(--r-lg); padding:14px;
+}
+.app-top{display:flex; justify-content:space-between; align-items:center; gap:12px; padding:8px 10px 16px}
+.app-top b{font-weight:600; letter-spacing:-.02em; font-size:1rem}
+.app-top .who{display:flex; gap:6px; align-items:center}
+.who span{width:26px; height:26px; border-radius:50%; background:var(--white); box-shadow:inset 0 0 0 1px var(--hair); display:grid; place-items:center; font-size:.68rem; font-weight:600}
+.who span + span{margin-left:-10px}
+.tiles{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px}
+.tile{
+  background:rgba(255,255,255,.9); border-radius:var(--r-sm); padding:18px 18px 16px; box-shadow:0 1px 2px rgba(20,24,32,.05);
+  display:flex; flex-direction:column; gap:8px; min-height:148px; min-width:0;
+}
+.tile .val{font-size:clamp(1.1rem,1rem + .45vw,1.35rem); font-weight:600; letter-spacing:-.025em; line-height:1.2}
+.tile .cap{margin-top:auto; font-size:.88rem; color:var(--dim); line-height:1.4}
+.tile--next{grid-column:span 2; background:var(--ink); color:#fff}
+.tile--next .mono{color:rgba(255,255,255,.6)}
+.tile--next .cap{color:rgba(255,255,255,.7)}
+.tile--next .mono::before{content:""; display:inline-block; width:7px; height:7px; border-radius:50%; background:var(--accent); margin-right:8px; vertical-align:1px}
+.progress{height:4px; border-radius:4px; background:var(--bg-2); overflow:hidden}
+.progress i{display:block; height:100%; width:60%; background:var(--ink); border-radius:inherit}
+.plan-q{position:absolute; z-index:2; left:0; top:0}
+.plan-q .q{animation:none}
+.plan-end{margin-top:clamp(24px,3vw,36px); text-align:center; font-size:clamp(1.3rem,1.05rem + 1vw,1.9rem); font-weight:600; letter-spacing:-.03em}
+.plan-end span{color:var(--accent)}
+.plan-mobile-qs{display:none}
+@media (max-width:899px){
+  .plan-pin{min-height:0}
+  .plan-q{display:none}
+  .plan-mobile-qs{display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin:0 auto 18px; max-width:520px; position:relative; z-index:1}
+  .plan-mobile-qs .q{font-size:.85rem; padding:9px 13px 9px 11px; animation:none; text-decoration:line-through; text-decoration-color:rgba(28,28,30,.25); color:var(--dim)}
+  .tiles{grid-template-columns:1fr 1fr}
+  .tile--next{grid-column:span 2}
+}
+@media (max-width:520px){
+  .tiles{grid-template-columns:1fr}
+  .tile--next{grid-column:auto}
+  .tile{min-height:0}
+}
+
+/* =========================================================
+   06 SOLUÇÃO — uma mensagem de cada vez
+   ========================================================= */
+.solution .stack{max-width:900px}
+.solution h2{max-width:20ch}
+.solution .lede{text-align:center}
+.decide{
+  margin-top:clamp(48px,7vw,88px); font-size:clamp(2.2rem,1.2rem + 4vw,4.6rem); font-weight:620; letter-spacing:-.045em; line-height:1;
+}
+.decide span{display:block; color:var(--faint)}
+
+/* =========================================================
+   07 BENEFÍCIOS — bento
+   ========================================================= */
+.bento{margin-top:clamp(40px,6vw,64px); display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:14px}
+.b{
+  position:relative; overflow:hidden; border-radius:var(--r-lg); background:var(--white); box-shadow:var(--sh-1);
+  padding:clamp(22px,2.4vw,32px); display:flex; flex-direction:column; gap:10px; min-height:230px;
+  transition:transform .5s var(--ease), box-shadow .5s var(--ease);
+}
+.b:hover{transform:translateY(-4px); box-shadow:var(--sh-2)}
+.b h3{font-size:clamp(1.3rem,1.1rem + .6vw,1.65rem); letter-spacing:-.03em; line-height:1.12}
+.b p{color:var(--dim); max-width:26em}
+.b .mono{margin-bottom:auto; padding-bottom:18px}
+.b--6{grid-column:span 6} .b--4{grid-column:span 4} .b--5{grid-column:span 5} .b--7{grid-column:span 7}
+.b--flat{background:var(--bg-2); box-shadow:none}
+.b--tall{min-height:340px}
+.b-ui{position:relative; z-index:1; margin-top:auto; padding-top:22px; display:flex; flex-wrap:wrap; gap:8px}
+.b .aura{opacity:.55}
+.b > *:not(.aura){position:relative; z-index:1}
+.chip{display:inline-flex; align-items:center; gap:8px; padding:9px 13px; border-radius:12px; font-size:.86rem; font-weight:500}
+.chip i{width:6px; height:6px; border-radius:50%; background:var(--faint)}
+.chip--on i{background:var(--accent)}
+.rows{display:grid; gap:6px; width:100%}
+.row{display:flex; align-items:center; justify-content:space-between; padding:11px 14px; border-radius:12px; background:var(--bg); font-size:.88rem; font-weight:500}
+.row em{font-style:normal; font-family:var(--f-mono); font-size:.68rem; color:var(--dim); letter-spacing:.04em}
+.row--on{background:var(--ink); color:#fff}
+.row--on em{color:rgba(255,255,255,.65)}
+.vs{display:grid; grid-template-columns:1fr auto 1fr; gap:10px; align-items:center; width:100%}
+.vs > div{padding:14px; border-radius:14px; background:var(--bg); font-size:.86rem; font-weight:500; display:grid; gap:8px}
+.vs .bar{height:4px; border-radius:4px; background:var(--bg-2); overflow:hidden}
+.vs .bar i{display:block; height:100%; background:var(--ink)}
+.vs b{font-family:var(--f-mono); font-size:.66rem; color:var(--faint); font-weight:500}
+@media (max-width:980px){
+  .b--6,.b--4,.b--5,.b--7{grid-column:span 6}
+  .b--full-md{grid-column:span 12}
+}
+@media (max-width:620px){
+  .b--6,.b--4,.b--5,.b--7{grid-column:span 12; min-height:0}
+  .b--tall{min-height:0}
+}
+
+/* =========================================================
+   08 SERVIÇOS — produtos diferentes
+   ========================================================= */
+.svc-grid{margin-top:clamp(40px,6vw,64px); display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); grid-template-rows:auto auto; gap:14px}
+.svc{
+  position:relative; overflow:hidden; border-radius:var(--r-xl); padding:clamp(26px,3vw,40px);
+  display:flex; flex-direction:column; gap:14px; background:var(--white); box-shadow:var(--sh-1);
+  transition:transform .5s var(--ease), box-shadow .5s var(--ease);
+}
+.svc:hover{transform:translateY(-4px); box-shadow:var(--sh-2)}
+.svc > *:not(.aura){position:relative; z-index:1}
+.svc h3{font-size:clamp(1.7rem,1.25rem + 1.5vw,2.5rem)}
+.svc p{color:var(--dim); max-width:28em}
+.svc .link{margin-top:auto; padding-top:8px}
+.svc .tag{align-self:flex-start}
+.svc--main{grid-column:6 / span 7; grid-row:1 / span 2; min-height:560px}
+.svc--main .aura{opacity:.9; top:40%}
+.svc--main h3{font-size:clamp(2.1rem,1.4rem + 2.2vw,3.2rem)}
+.svc--main p{font-size:1.15rem; color:var(--ink-2)}
+.svc--side{grid-column:1 / span 5; min-height:270px}
+.svc--c2{grid-row:1} .svc--c3{grid-row:2}
+.svc--flat{background:var(--bg-2); box-shadow:none}
+.session{
+  margin-top:auto; align-self:stretch; border-radius:var(--r); padding:18px; display:flex; align-items:center; gap:16px; max-width:420px;
+}
+.session .who span{width:44px; height:44px; font-size:.85rem}
+.session .who span + span{margin-left:-14px; background:var(--ink); color:#fff; box-shadow:none}
+.session div:last-child{display:grid; gap:2px}
+.session b{font-weight:600; letter-spacing:-.02em}
+.shelf{display:grid; gap:6px; margin-top:4px}
+.shelf span{height:34px; border-radius:10px; background:rgba(255,255,255,.8); display:flex; align-items:center; padding-inline:12px; gap:10px}
+.shelf span::before{content:""; width:14px; height:14px; border-radius:4px; background:var(--bg-2)}
+.shelf span::after{content:""; height:6px; border-radius:6px; background:var(--bg-2); flex:1; max-width:var(--w,60%)}
+.strengths{display:flex; gap:6px; align-items:flex-end; height:52px; margin-top:4px}
+.strengths i{width:18px; border-radius:6px; background:var(--bg-2)}
+.strengths i.on{background:var(--accent)}
+@media (max-width:900px){
+  .svc--main, .svc--side, .svc--c2, .svc--c3{grid-column:1 / -1; grid-row:auto; min-height:0}
+  .svc--main{order:-1}
+  .session{margin-top:20px}
+}
+
+/* =========================================================
+   09 CYNTHIA — foto + card de vidro sobreposto
+   ========================================================= */
+.philo{max-width:18ch}
+.philo-sub{margin-top:22px; font-size:clamp(1.25rem,1.05rem + .8vw,1.75rem); font-weight:500; letter-spacing:-.025em; line-height:1.25; color:var(--faint); max-width:26em}
+.portrait{
+  position:relative; margin-top:clamp(40px,6vw,72px); border-radius:var(--r-xl); overflow:hidden;
+  min-height:clamp(560px, 56vw, 680px); background:var(--bg-2);
+  display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); align-items:end; padding:clamp(16px,2.5vw,28px);
+}
+.portrait .aura{opacity:.8}
+.photo-slot{position:absolute; inset:0; display:grid; place-items:center; align-content:center; gap:10px; text-align:center; padding:24px; grid-template-columns:1fr}
+.photo-slot p{color:var(--dim); font-size:.95rem; max-width:22em; justify-self:center}
+.photo-slot > div{grid-column:1; max-width:48%}
+.about-card{
+  grid-column:7 / span 6; position:relative; z-index:2; border-radius:var(--r-lg); padding:clamp(22px,3vw,34px);
+  display:flex; flex-direction:column; gap:18px;
+}
+.about-card h3{font-size:clamp(1.9rem,1.3rem + 1.8vw,2.7rem)}
+.slots{display:grid; grid-template-columns:1fr 1fr; gap:8px}
+.slot{padding:12px 14px; border-radius:14px; background:rgba(255,255,255,.7); display:grid; gap:4px; font-size:.88rem; color:var(--dim)}
+.slot b{font-family:var(--f-mono); font-size:.64rem; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-2); font-weight:500}
+.slot--wide{grid-column:1 / -1}
+@media (max-width:860px){
+  .portrait{grid-template-columns:1fr; min-height:0; padding-top:clamp(300px,70vw,420px)}
+  .photo-slot{inset:0 0 auto 0; height:clamp(300px,70vw,420px)}
+  .photo-slot > div{max-width:none}
+  .about-card{grid-column:1}
+}
+@media (max-width:460px){ .slots{grid-template-columns:1fr} }
+
+/* =========================================================
+   10 HISTÓRIAS
+   ========================================================= */
+.stories-top{display:flex; justify-content:space-between; align-items:flex-end; gap:20px; flex-wrap:wrap}
+.cases{
+  margin-top:clamp(36px,5vw,56px); display:grid; grid-auto-flow:column; grid-auto-columns:min(880px, 88%); gap:14px;
+  overflow-x:auto; scroll-snap-type:x mandatory; padding:4px 4px 24px; scrollbar-width:none;
+}
+.cases::-webkit-scrollbar{display:none}
+.case{scroll-snap-align:start; border-radius:var(--r-xl); background:var(--white); box-shadow:var(--sh-1); display:grid; grid-template-columns:230px minmax(0,1fr); overflow:hidden; min-width:0}
+.case-who{background:var(--bg-2); padding:26px; display:flex; flex-direction:column; gap:14px}
+.avatar{width:64px; height:64px; border-radius:50%; background:var(--white); display:grid; place-items:center; color:var(--faint); font-family:var(--f-mono); font-size:.6rem; letter-spacing:.06em; text-transform:uppercase}
+.case-who b{font-size:1.15rem; font-weight:600; letter-spacing:-.02em}
+.case-who small{color:var(--dim); font-size:.86rem}
+.case-story{padding:28px 30px; display:grid; gap:20px}
+.stage{display:grid; grid-template-columns:140px minmax(0,1fr); gap:16px; align-items:baseline}
+.stage p{color:var(--faint)}
+.stage + .stage{padding-top:20px; box-shadow:inset 0 1px 0 var(--hair)}
+.metrics{margin-top:14px; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px}
+.metric{border-radius:var(--r-lg); background:var(--bg-2); padding:26px; display:grid; gap:10px}
+.metric b{font-size:clamp(2.4rem,1.8rem + 2vw,3.4rem); font-weight:600; letter-spacing:-.045em; line-height:1; color:#CFD2D8; font-variant-numeric:tabular-nums}
+.metric span{color:var(--dim); font-size:.92rem}
+@media (max-width:760px){
+  .case{grid-template-columns:1fr}
+  .case-who{flex-direction:row; align-items:center; flex-wrap:wrap}
+  .stage{grid-template-columns:1fr; gap:6px}
+  .metrics{grid-template-columns:1fr}
+}
+
+/* =========================================================
+   11 FAQ
+   ========================================================= */
+.faq .container{padding:clamp(28px,5vw,72px); display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); gap:clamp(32px,5vw,80px); align-items:start}
+.faq-item + .faq-item{box-shadow:inset 0 1px 0 var(--hair)}
+.faq-q{
+  width:100%; display:flex; justify-content:space-between; align-items:center; gap:20px; text-align:left;
+  background:none; border:0; padding:24px 0; cursor:pointer; color:var(--ink);
+  font:560 clamp(1.08rem,1rem + .4vw,1.3rem)/1.3 var(--f); letter-spacing:-.025em;
+}
+.pm{width:32px; height:32px; flex-shrink:0; border-radius:50%; background:var(--bg); position:relative; transition:background-color .35s ease, transform .45s var(--ease)}
+.pm::before,.pm::after{content:""; position:absolute; left:50%; top:50%; width:11px; height:1.5px; border-radius:2px; background:var(--ink); transform:translate(-50%,-50%); transition:transform .45s var(--ease), background-color .35s}
+.pm::after{transform:translate(-50%,-50%) rotate(90deg)}
+.faq-q[aria-expanded="true"] .pm{background:var(--ink)}
+.faq-q[aria-expanded="true"] .pm::before{background:#fff}
+.faq-q[aria-expanded="true"] .pm::after{transform:translate(-50%,-50%) rotate(0); background:#fff}
+.faq-a{display:grid; grid-template-rows:0fr; transition:grid-template-rows .5s var(--ease)}
+.faq-a > div{overflow:hidden}
+.faq-a .inner{padding:0 52px 26px 0; display:flex; flex-direction:column; gap:10px; align-items:flex-start; color:var(--dim)}
+.faq-q[aria-expanded="true"] + .faq-a{grid-template-rows:1fr}
+@media (max-width:820px){ .faq .container{grid-template-columns:1fr} .faq-a .inner{padding-right:0} }
+
+/* =========================================================
+   12 CTA FINAL — fecho da narrativa (claro, com vidro)
+   ========================================================= */
+.final{padding-block:0 clamp(88px,10vw,140px)}
+.final-card{
+  position:relative; overflow:hidden; border-radius:var(--r-xl); background:var(--white); box-shadow:var(--sh-2);
+  padding:clamp(48px,8vw,120px) clamp(22px,6vw,96px); text-align:center;
+}
+.final-card .aura{opacity:.95}
+.final-card > *:not(.aura){position:relative; z-index:1}
+.final-card h2{font-size:clamp(2.4rem,1.3rem + 4.4vw,5rem); letter-spacing:-.045em; max-width:15ch; margin-inline:auto}
+.final-card h2 span{display:block; color:var(--faint)}
+.final-card p{margin:24px auto 0; max-width:30em; color:var(--dim); font-size:clamp(1.1rem,1rem + .4vw,1.3rem)}
+.final-card .btns{margin-top:34px}
+.next-widget{display:inline-flex; align-items:center; gap:12px; padding:10px 16px 10px 12px; border-radius:16px; margin-bottom:28px; text-align:left}
+.next-widget i{width:30px; height:30px; border-radius:10px; background:var(--btn-bg); display:grid; place-items:center}
+.next-widget i::after{content:""; width:7px; height:7px; border-radius:50%; background:var(--accent)}
+.next-widget b{display:block; font-size:.92rem; font-weight:600; letter-spacing:-.015em}
+
+/* =========================================================
+   COR + FOTOGRAFIA
+   ========================================================= */
+/* perguntas flutuantes: pontos com as cores dos serviços */
+.q--c1::before{background:var(--c-consult)}
+.q--c2::before{background:var(--c-member)}
+.q--c3::before{background:var(--c-morris)}
+
+/* foto do hero */
+.hero-media{
+  position:relative; z-index:1; margin:clamp(36px,5vw,64px) 0 0; border-radius:var(--r-xl); overflow:hidden;
+  aspect-ratio:16/7; max-width:100%;
+  background:linear-gradient(120deg, var(--c-consult-soft) 0%, var(--c-member-soft) 55%, var(--c-morris-soft) 100%);
+  box-shadow:var(--sh-3);
+}
+.hero-media img{width:100%; height:100%; object-fit:cover; object-position:50% 30%; display:block}
+.media-card{position:absolute; left:clamp(12px,2vw,24px); bottom:clamp(12px,2vw,24px); display:flex; align-items:center; gap:12px; padding:12px 16px 12px 12px; border-radius:18px; max-width:calc(100% - 24px)}
+.media-card i{width:34px; height:34px; border-radius:11px; background:var(--ink); display:grid; place-items:center; flex-shrink:0}
+.media-card i::after{content:""; width:8px; height:8px; border-radius:50%; background:var(--accent)}
+.media-card b{display:block; font-weight:600; letter-spacing:-.02em}
+.media-card--r{left:auto; right:clamp(12px,2vw,24px); top:clamp(12px,2vw,24px); bottom:auto; padding:10px 14px 10px 10px}
+.media-card--r .who, .session .who{display:flex; align-items:center}
+.media-card--r .who span + span{margin-left:-6px}
+.session .who span + span{margin-left:-8px}
+.media-card--r .who span{width:30px; height:30px; font-size:.7rem}
+.media-card--r .who span + span{background:var(--c-consult); color:#fff; box-shadow:none}
+@media (max-width:640px){ .hero-media{aspect-ratio:4/3.4} .media-card--r{display:none} }
+
+/* interface do plano: cores por tipo */
+.tile--c1 .mono, .tile--c2 .mono, .tile--c3 .mono{display:inline-flex; align-items:center; gap:8px}
+.tile--c1 .mono::before, .tile--c2 .mono::before, .tile--c3 .mono::before{content:""; width:7px; height:7px; border-radius:50%}
+.tile--c1{background:linear-gradient(160deg,#fff 40%, var(--c-consult-soft))}
+.tile--c1 .mono::before{background:var(--c-consult)}
+.tile--c2{background:linear-gradient(160deg,#fff 40%, var(--c-member-soft))}
+.tile--c2 .mono::before{background:var(--c-member)}
+.tile--c3{background:linear-gradient(160deg,#fff 40%, var(--c-morris-soft))}
+.tile--c3 .mono::before{background:var(--c-morris)}
+.progress i{background:var(--c-consult)!important}
+
+/* faixa pêssego (terceiro tom do ritmo da página) */
+.band-tint{
+  margin-inline:clamp(8px,1.2vw,16px); border-radius:clamp(28px,4vw,48px);
+  background:linear-gradient(170deg, var(--peach) 0%, var(--peach-2) 60%, #F1EEFB 100%);
+}
+.band-tint .b--flat{background:rgba(255,255,255,.6); box-shadow:none}
+
+/* serviços: cada produto com a sua cor */
+.svc--c1{background:linear-gradient(165deg,#FFFFFF 30%, var(--c-consult-soft) 100%)}
+.svc--c1 .tag::before{background:var(--c-consult)}
+.svc--c1 .link .arrow{color:var(--c-consult)}
+.svc--c2{background:linear-gradient(165deg,#FFFFFF 10%, var(--c-member-soft) 100%)}
+.svc--c2 .tag::before{background:var(--c-member)}
+.svc--c2 .link .arrow{color:var(--c-member)}
+.svc--c2 .shelf span::before{background:var(--c-member-soft)}
+.svc--c2 .shelf span:first-child::before{background:var(--c-member)}
+.svc--c3{background:linear-gradient(165deg,#FFFFFF 10%, var(--c-morris-soft) 100%)}
+.svc--c3 .tag::before{background:var(--c-morris)}
+.svc--c3 .link .arrow{color:var(--c-morris)}
+.svc--c3 .strengths i{background:var(--c-morris-soft)}
+.svc--c3 .strengths i.on{background:var(--c-morris)}
+.svc-photo{position:relative; margin-top:auto; border-radius:var(--r); overflow:hidden; aspect-ratio:16/9; max-width:100%;
+  background:linear-gradient(120deg, var(--c-consult-soft), #FBE3EA)}
+.svc-photo img{width:100%; height:100%; object-fit:cover; object-position:50% 60%; display:block}
+.svc-photo .session{position:absolute; left:14px; bottom:14px; margin:0; max-width:calc(100% - 28px)}
+.svc--main .link{margin-top:0}
+
+/* retrato provisório da Cynthia */
+.photo-slot .slot-img{position:absolute; top:0; left:0; bottom:0; width:58%; height:100%; object-fit:cover; object-position:50% 20%; z-index:1; border-radius:0 var(--r-xl) var(--r-xl) 0}
+@media (max-width:860px){ .photo-slot .slot-img{width:100%; border-radius:0} }
+.photo-slot .ph-flag{position:absolute; top:16px; left:16px; z-index:2; background:rgba(255,255,255,.85)}
+.photo-slot{overflow:hidden}
+
+/* avatares */
+.avatar{position:relative; overflow:hidden}
+.avatar img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover}
+
+/* CTA final com imagem de ambiente */
+.final-card > img.final-bg{position:absolute; inset:0; z-index:0; width:100%; height:100%; object-fit:cover; opacity:.4; filter:saturate(.9)}
+.final-card::after{content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
+  background:radial-gradient(80% 90% at 50% 50%, rgba(11,11,13,.55), rgba(11,11,13,.9))}
+
+/* digitação: última palavra + cursor a piscar */
+.caret{display:inline-block; width:.07em; min-width:3px; height:.95em; margin-left:.06em; vertical-align:-.1em; background:var(--c-consult); border-radius:2px; animation:caret 1.05s steps(1) infinite}
+@keyframes caret{0%,50%{opacity:1} 50.01%,100%{opacity:0}}
+.bubble-tail{transition:opacity .4s ease}
+.is-typed .bubble-tail{opacity:0}
+
+/* card de vídeo do hero */
+.video-card{
+  position:relative; z-index:1; margin:clamp(36px,5vw,64px) 0 0; border-radius:var(--r-xl); overflow:hidden;
+  aspect-ratio:16/8; max-width:100%; background:#1C1C1E; box-shadow:var(--sh-3); cursor:pointer; isolation:isolate;
+}
+.video-card .video-cover, .video-card video{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 30%; transition:transform 1.2s var(--ease)}
+.video-card:hover .video-cover{transform:scale(1.03)}
+.video-shade{position:absolute; inset:0; background:linear-gradient(180deg, rgba(10,10,12,.25) 0%, rgba(10,10,12,.55) 60%, rgba(10,10,12,.75) 100%)}
+.play{
+  position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); z-index:2;
+  width:clamp(84px,9vw,112px); aspect-ratio:1; border-radius:50%; border:0; cursor:pointer; color:#fff; display:grid; place-items:center;
+  --glass-1:rgba(255,255,255,.34); --glass-2:rgba(255,255,255,.10); --glass-top:rgba(255,255,255,.7); --glass-edge:rgba(255,255,255,.35); --glass-shine:rgba(255,255,255,.55);
+  transition:transform .5s var(--ease), box-shadow .5s var(--ease);
+}
+.play svg{margin-left:4px; filter:drop-shadow(0 2px 6px rgba(0,0,0,.25))}
+.video-card:hover .play{transform:translate(-50%,-50%) scale(1.06)}
+.play::before{content:""; position:absolute; inset:-14px; border-radius:50%; border:1px solid rgba(255,255,255,.35); animation:ring 2.6s var(--ease) infinite}
+@keyframes ring{0%{transform:scale(.9); opacity:.9} 100%{transform:scale(1.25); opacity:0}}
+.video-meta{position:absolute; left:clamp(18px,3vw,36px); bottom:clamp(18px,3vw,32px); z-index:2; color:#fff; display:grid; gap:4px}
+.video-meta .mono{color:rgba(255,255,255,.7)}
+.video-meta b{font-size:clamp(1.1rem,1rem + .5vw,1.45rem); font-weight:600; letter-spacing:-.025em}
+.video-flag{position:absolute; top:16px; left:16px; z-index:2; background:rgba(255,255,255,.88)}
+.video-card.is-playing .play, .video-card.is-playing .video-shade, .video-card.is-playing .video-meta, .video-card.is-playing .video-flag{opacity:0; pointer-events:none; transition:opacity .4s}
+@media (max-width:640px){ .video-card{aspect-ratio:4/3.6} .play::before{inset:-10px} }
+
+/* CTA por baixo do card de foco */
+.focus-cta{margin-top:clamp(28px,4vw,44px)}
+
+/* CTA a meio da página */
+.mid-cta{padding-block:clamp(72px,9vw,120px) 0}
+.mid-card{display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr); gap:clamp(28px,4vw,64px); align-items:center; text-align:left; background:var(--bg)}
+.mid-card > img.final-bg{display:none}
+.mid-card::after{display:none}
+.mid-copy{position:relative; z-index:1; display:flex; flex-direction:column; gap:20px; align-items:flex-start}
+.mid-card h2{font-size:clamp(2.1rem,1.2rem + 3.4vw,3.9rem); margin:0; max-width:14ch}
+.mid-card h2 span{display:block; color:var(--c-consult)}
+.mid-card p{margin:0; max-width:30em}
+.mid-card .btns{margin-top:6px}
+.route{position:relative; z-index:1; display:grid; gap:10px}
+.route::before{content:""; position:absolute; left:33px; top:26px; bottom:26px; width:2px; background:linear-gradient(var(--c-consult), var(--c-member), var(--c-morris)); opacity:.6}
+.route-step{display:flex; align-items:center; gap:14px; padding:14px 18px 14px 14px; border-radius:18px; position:relative}
+.route-step:nth-child(2){margin-left:18px} .route-step:nth-child(3){margin-left:36px} .route-goal{margin-left:54px}
+.route-step i{width:38px; height:38px; flex-shrink:0; border-radius:50%; display:grid; place-items:center; background:rgba(255,255,255,.08); box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+.route-step i::after{content:""; width:8px; height:8px; border-radius:50%; background:rgba(255,255,255,.5)}
+.route-step i.ok{background:var(--c-member)} .route-step i.ok::after{width:10px; height:6px; border-radius:0; background:none; border:2px solid #fff; border-top:0; border-right:0; transform:rotate(-45deg) translate(1px,-1px)}
+.route-step i.goal{background:var(--c-consult); box-shadow:0 0 0 6px rgba(242,97,63,.2)} .route-step i.goal::after{background:#fff}
+.route-step b{display:block; font-weight:600; letter-spacing:-.02em; color:var(--ink)}
+.route-goal{background:linear-gradient(135deg, rgba(242,97,63,.28), rgba(255,255,255,.06))}
+@media (max-width:860px){ .mid-card{grid-template-columns:1fr} .route-step, .route-step:nth-child(n){margin-left:0} }
+
+/* banner Europa (mais baixo, claro e quente) */
+.eu{padding-block:clamp(8px,2vw,24px) 0}
+.eu-card{
+  position:relative; overflow:hidden; border-radius:var(--r-xl);
+  background:linear-gradient(120deg, #FFF1E8 0%, #FCEEF4 45%, #EEF0FD 100%); box-shadow:var(--sh-1);
+  padding:clamp(28px,4vw,52px) clamp(22px,4vw,56px);
+  display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(24px,4vw,56px); align-items:center;
+}
+.eu-card .aura{opacity:.7}
+.eu-copy{position:relative; z-index:1; display:flex; flex-direction:column; gap:16px; align-items:flex-start}
+.eu-copy .tag{background:rgba(255,255,255,.8)}
+.eu-card h2{font-size:clamp(1.7rem,1.15rem + 1.8vw,2.55rem); max-width:20ch}
+.eu-card h2 span{display:block; color:var(--c-consult)}
+.eu-card h2 span span{display:inline}
+.eu-card p{color:var(--ink-2); max-width:30em}
+.eu-marquee{position:relative; z-index:1; display:grid; gap:12px; min-width:0;
+  -webkit-mask-image:linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); mask-image:linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent)}
+.eu-row{overflow:hidden; padding-block:6px}
+.eu-track{display:flex; gap:10px; width:max-content; animation:eu-slide 38s linear infinite}
+.eu-row--rev .eu-track{animation-direction:reverse; animation-duration:44s}
+.eu-card:hover .eu-track{animation-play-state:paused}
+@keyframes eu-slide{from{transform:translateX(0)} to{transform:translateX(-50%)}}
+.city{display:inline-flex; align-items:center; gap:10px; padding:13px 18px 13px 14px; border-radius:18px; white-space:nowrap;
+  font-size:clamp(1rem,.95rem + .3vw,1.2rem); font-weight:560; letter-spacing:-.02em; color:var(--ink)}
+.city i{width:8px; height:8px; border-radius:50%}
+.city i.c1{background:var(--c-consult)} .city i.c2{background:var(--c-member)} .city i.c3{background:var(--c-morris)}
+.city small{font-family:var(--f-mono); font-size:.66rem; color:var(--faint); letter-spacing:.08em}
+@media (max-width:860px){ .eu-card{grid-template-columns:1fr} }
+
+/* Chinês: sem espaçamento negativo entre caracteres, entrelinha mais aberta */
+html:lang(zh-Hans) body{letter-spacing:0}
+html:lang(zh-Hans) h1, html:lang(zh-Hans) h2, html:lang(zh-Hans) h3, html:lang(zh-Hans) .decide,
+html:lang(zh-Hans) .thought p, html:lang(zh-Hans) .q, html:lang(zh-Hans) .city{letter-spacing:0; line-height:1.2}
+html:lang(zh-Hans) .t-hero{line-height:1.12}
+
+/* =========================================================
+   CTAs extra de marcação
+   ========================================================= */
+.cta-strip{
+  margin-top:clamp(28px,4vw,40px); display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px 24px;
+  padding:18px 18px 18px 26px; border-radius:999px; background:var(--white); box-shadow:var(--sh-1);
+}
+.cta-strip p{font-size:clamp(1.05rem,1rem + .3vw,1.2rem); font-weight:560; letter-spacing:-.02em}
+@media (max-width:620px){ .cta-strip{border-radius:var(--r-lg); padding:22px} .cta-strip .btn{width:100%; justify-content:center} }
+.plan-cta{margin-top:18px}
+.mobile-book{
+  position:fixed; left:0; right:0; bottom:0; z-index:45; display:none; justify-content:center;
+  padding:0 16px calc(14px + env(safe-area-inset-bottom, 0px)); pointer-events:none;
+  transform:translateY(120%); transition:transform .5s var(--ease);
+}
+.mobile-book.is-on{transform:none}
+.mobile-book .btn{background:var(--accent); color:#fff; pointer-events:auto; width:100%; max-width:420px; justify-content:center; min-height:52px; box-shadow:0 14px 34px -14px rgba(20,24,32,.55)}
+@media (max-width:760px){ .mobile-book{display:flex} }
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.footer{padding-block:0 calc(36px + env(safe-area-inset-bottom, 0px))}
+.foot-grid{display:grid; grid-template-columns:minmax(0,1.5fr) repeat(4,minmax(0,1fr)); gap:32px; padding-top:48px; box-shadow:inset 0 1px 0 var(--hair)}
+.foot-brand p{margin-top:14px; color:var(--dim); max-width:22em; font-size:.95rem}
+.foot-col h4{font-family:var(--f-mono); font-size:.68rem; font-weight:500; letter-spacing:.1em; text-transform:uppercase; color:var(--faint); margin-bottom:14px; line-height:1.2}
+.foot-col ul{display:grid; gap:10px}
+.foot-col a{text-decoration:none; color:var(--ink-2); font-size:.92rem; transition:color .25s}
+.foot-col a:hover{color:var(--ink)}
+.foot-bottom{margin-top:48px; display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; color:var(--faint); font-size:.84rem}
+.foot-bottom nav{display:flex; gap:18px}
+.foot-bottom a{color:inherit; text-decoration:none}
+@media (max-width:900px){ .foot-grid{grid-template-columns:1fr 1fr} .foot-brand{grid-column:1 / -1} }
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important; transition-duration:.01ms!important}
+  .focus h3 em{background-size:100% 3px}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="top">
+  <div class="header-bar">
+    <!-- PENDENTE: logo oficial. Símbolo provisório. -->
+    <a class="logo" href="#top" aria-label="The University Launchpad, home">
+      <span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 2.5 21 20.5 12 15.6 3 20.5Z" fill="currentColor"/><path d="M12 2.5 21 20.5 12 15.6Z" fill="var(--accent)"/></svg></span>
+      The University Launchpad
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#how-we-help" data-i18n="t0">How We Help</a>
+      <a href="/personal-consulting" data-page data-fallback="#services" data-i18n="t1">Personal Consulting</a>
+      <a href="/membership" data-page data-fallback="#services" data-i18n="t2">Membership</a>
+      <a href="/morrisby" data-page data-fallback="#services">Morrisby</a>
+      <a href="/about" data-page data-fallback="#about" data-i18n="t3">About</a>
+      <a href="/resources" data-page data-fallback="#faq" data-i18n="t4">Resources</a>
+    </nav>
+    <div class="lang">
+      <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" aria-label="Change language">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>
+        <span class="lang-code">EN</span>
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="lang-menu glass" id="lang-menu" role="menu" hidden>
+        <button type="button" role="menuitemradio" aria-checked="true" data-lang="en">English <small>EN</small></button>
+        <button type="button" role="menuitemradio" aria-checked="false" data-lang="pt">Português <small>PT</small></button>
+        <button type="button" role="menuitemradio" aria-checked="false" data-lang="es">Español <small>ES</small></button>
+        <button type="button" role="menuitemradio" aria-checked="false" data-lang="zh" lang="zh-Hans">中文 <small>ZH</small></button>
+      </div>
+    </div>
+    <a class="btn btn--sm header-cta" href="/book" data-page data-fallback="#book" data-i18n="t5">Book a consultation</a>
+    <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" hidden>
+  <nav aria-label="Mobile">
+    <a href="#how-we-help" data-i18n="t0">How We Help</a>
+    <a href="/personal-consulting" data-page data-fallback="#services" data-i18n="t1">Personal Consulting</a>
+    <a href="/membership" data-page data-fallback="#services" data-i18n="t2">Membership</a>
+    <a href="/morrisby" data-page data-fallback="#services">Morrisby</a>
+    <a href="/about" data-page data-fallback="#about" data-i18n="t3">About</a>
+    <a href="/resources" data-page data-fallback="#faq" data-i18n="t4">Resources</a>
+  </nav>
+  <a class="btn" href="/book" data-page data-fallback="#book"><span data-i18n="t5">Book a consultation</span> <span class="arrow" aria-hidden="true">→</span></a>
+</div>
+
+<main>
+
+<!-- ============ 01 HERO — as perguntas ainda soltas ============ -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="aura" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-inner">
+      <h1 class="t-hero" id="hero-title" data-hero data-i18n="t6">
+        University is a big decision.
+        <span class="grey">You don’t have to figure it all out on your own.</span>
+      </h1>
+      <p class="lede" data-hero data-i18n="t7">We help students and families understand their options, make informed decisions and build a clear plan for what comes next.</p>
+      <div class="btns center" data-hero>
+        <a class="btn" href="#how-we-help"><span data-i18n="t8">Find out how we can help</span> <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn--ghost" href="/book" data-page data-fallback="#book" data-i18n="t5">Book a consultation</a>
+      </div>
+
+      <div class="floaters" aria-hidden="true">
+        <div class="floater" data-depth="26" style="left:6%;top:6%"><span class="q glass q--c1" style="--rot:-3deg;--dur:7.5s" data-i18n="t9">Which course?</span></div>
+        <div class="floater" data-depth="-22" style="left:78%;top:2%"><span class="q glass q--c2" style="--rot:2deg;--dur:8.5s;animation-delay:-2s" data-i18n="t10">Which university?</span></div>
+        <div class="floater" data-depth="32" style="left:1%;top:36%"><span class="q glass q--c3" style="--rot:2deg;--dur:9s;animation-delay:-4s" data-i18n="t11">My grades?</span></div>
+        <div class="floater" data-depth="-28" style="left:85%;top:32%"><span class="q glass q--hot" style="--rot:-2deg;--dur:7s;animation-delay:-1s" data-i18n="t12">Deadlines?</span></div>
+        <div class="floater" data-depth="20" style="left:7%;top:64%"><span class="q glass q--c3" style="--rot:-1.5deg;--dur:8s;animation-delay:-5s" data-i18n="t13">Scholarships?</span></div>
+        <div class="floater" data-depth="-18" style="left:79%;top:60%"><span class="q glass q--c2" style="--rot:1.5deg;--dur:9.5s;animation-delay:-3s" data-i18n="t14">What should I do next?</span></div>
+      </div>
+    </div>
+    <!-- VÍDEO DE INTRODUÇÃO — PENDENTE: colocar o ficheiro em data-video (ex: "video/intro.mp4", H.264 8-bit) e trocar a capa provisória. -->
+    <figure class="video-card" data-hero data-video="">
+      <img class="video-cover" src="img/hero-video-cover.jpg" alt="Introduction video cover" loading="eager">
+      <div class="video-shade" aria-hidden="true"></div>
+      <button class="play glass" type="button" aria-label="Play the introduction video">
+        <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5Z" fill="currentColor"/></svg>
+      </button>
+      <figcaption class="video-meta">
+        <span class="mono" data-i18n="v1">Introduction</span>
+        <b data-i18n="v2">Meet Cynthia and how we work</b>
+      </figcaption>
+      <span class="pending video-flag">Video pending</span>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ 02 ESTUDANTE ============ -->
+<section class="section" id="students" aria-labelledby="students-title" style="padding-top:clamp(24px,4vw,56px)">
+  <div class="wrap">
+    <div class="head-row">
+      <div class="stack">
+        <span class="tag" data-reveal data-i18n="t15">For students</span>
+        <h2 class="t-l" id="students-title" data-reveal data-i18n="t16">There comes a point when “I’ll figure it out later” starts to feel a little too close.</h2>
+      </div>
+      <p class="lede" data-reveal data-i18n="t17">The closer university gets, the more questions seem to appear.</p>
+    </div>
+
+    <div class="thoughts" data-stagger>
+      <div class="thought thought--big">
+        <div class="aura" aria-hidden="true"></div>
+        <div class="inner">
+          <span class="bubble-tail glass" aria-hidden="true" data-i18n="t18">typing…</span>
+          <p data-i18n="t19" data-type>What should I study?</p>
+        </div>
+      </div>
+      <div class="thought thought--wide"><span class="mono" data-i18n="t20">Universities</span><p data-i18n="t21">Which universities should I consider?</p></div>
+      <div class="thought thought--narrow"><span class="mono" data-i18n="t22">Grades</span><p data-i18n="t23">Are my grades good enough?</p></div>
+      <div class="thought thought--narrow"><span class="mono" data-i18n="t24">Timing</span><p data-i18n="t25">When should I start applying?</p></div>
+      <div class="thought thought--narrow"><span class="mono" data-i18n="t26">Scholarships</span><p data-i18n="t27">Could I get a scholarship?</p></div>
+      <div class="thought thought--narrow"><span class="mono" data-i18n="t28">The big one</span><p data-i18n="t29">What if I make the wrong choice?</p></div>
+    </div>
+    <div class="cta-strip" data-reveal>
+      <p data-i18n="n1">Sound familiar? Let’s talk it through.</p>
+      <a class="btn" href="/book" data-page data-fallback="#book"><span data-i18n="t5">Book a consultation</span> <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03b BANNER EUROPA ============
+     PENDENTE: confirmar com a Cynthia os países/cidades para onde ela orienta alunos (lista ilustrativa). -->
+<section class="eu" id="europe" aria-labelledby="eu-title">
+  <div class="wrap">
+    <div class="eu-card">
+      <div class="aura" aria-hidden="true"></div>
+      <div class="eu-copy">
+        <span class="tag" data-reveal data-i18n="e0">Study in Europe</span>
+        <h2 id="eu-title" data-reveal data-i18n="e1">Thinking about studying in Europe? <span>We can help you get there.</span></h2>
+        <p data-reveal data-i18n="e2">Different countries, different systems, different deadlines. We help you understand your options and plan the move.</p>
+        <div class="btns" data-reveal><a class="btn" href="/book" data-page data-fallback="#book"><span data-i18n="t5">Book a consultation</span> <span class="arrow" aria-hidden="true">→</span></a></div>
+      </div>
+      <div class="eu-marquee" aria-hidden="true">
+        <div class="eu-row"><div class="eu-track"><span class="city glass"><i class="c1"></i>Lisbon<small>PT</small></span><span class="city glass"><i class="c2"></i>Amsterdam<small>NL</small></span><span class="city glass"><i class="c3"></i>Madrid<small>ES</small></span><span class="city glass"><i class="c1"></i>Milan<small>IT</small></span><span class="city glass"><i class="c2"></i>Dublin<small>IE</small></span><span class="city glass"><i class="c3"></i>Paris<small>FR</small></span><span class="city glass"><i class="c1"></i>Berlin<small>DE</small></span><span class="city glass"><i class="c1"></i>Lisbon<small>PT</small></span><span class="city glass"><i class="c2"></i>Amsterdam<small>NL</small></span><span class="city glass"><i class="c3"></i>Madrid<small>ES</small></span><span class="city glass"><i class="c1"></i>Milan<small>IT</small></span><span class="city glass"><i class="c2"></i>Dublin<small>IE</small></span><span class="city glass"><i class="c3"></i>Paris<small>FR</small></span><span class="city glass"><i class="c1"></i>Berlin<small>DE</small></span></div></div>
+        <div class="eu-row eu-row--rev"><div class="eu-track"><span class="city glass"><i class="c1"></i>Barcelona<small>ES</small></span><span class="city glass"><i class="c2"></i>Maastricht<small>NL</small></span><span class="city glass"><i class="c3"></i>Bologna<small>IT</small></span><span class="city glass"><i class="c1"></i>Copenhagen<small>DK</small></span><span class="city glass"><i class="c2"></i>Porto<small>PT</small></span><span class="city glass"><i class="c3"></i>Vienna<small>AT</small></span><span class="city glass"><i class="c1"></i>Leuven<small>BE</small></span><span class="city glass"><i class="c1"></i>Barcelona<small>ES</small></span><span class="city glass"><i class="c2"></i>Maastricht<small>NL</small></span><span class="city glass"><i class="c3"></i>Bologna<small>IT</small></span><span class="city glass"><i class="c1"></i>Copenhagen<small>DK</small></span><span class="city glass"><i class="c2"></i>Porto<small>PT</small></span><span class="city glass"><i class="c3"></i>Vienna<small>AT</small></span><span class="city glass"><i class="c1"></i>Leuven<small>BE</small></span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 O VERDADEIRO PROBLEMA ============ -->
+<section class="section problem band-dark theme-dark" id="problem" aria-labelledby="problem-title">
+  <div class="wrap">
+    <div class="stack">
+      <h2 class="t-xl" id="problem-title" style="max-width:14ch" data-reveal data-i18n="t42">The problem isn’t a lack of information.</h2>
+      <p class="lede" data-reveal data-i18n="t43">University websites, rankings, application guides, deadlines, videos, opinions, advice… There’s more information available than ever.</p>
+    </div>
+
+    <div class="noise" aria-hidden="true">
+      <span class="n" style="left:13%;top:15%;--r:-4deg" data-i18n="t44">University websites</span>
+      <span class="n n--doc" style="left:36%;top:9%;--r:3deg">rankings_2026.pdf</span>
+      <span class="n n--far" style="left:58%;top:18%;--r:-2deg" data-i18n="t45">Application guides</span>
+      <span class="n" style="left:83%;top:11%;--r:5deg" data-i18n="t46">Deadlines</span>
+      <span class="n n--far" style="left:9%;top:42%;--r:6deg" data-i18n="t47">Videos</span>
+      <span class="n" style="left:32%;top:37%;--r:-5deg" data-i18n="t48">“You should do medicine”</span>
+      <span class="n n--doc" style="left:61%;top:42%;--r:2deg">entry_requirements.pdf</span>
+      <span class="n n--far" style="left:87%;top:36%;--r:-3deg" data-i18n="t49">Forums</span>
+      <span class="n" style="left:17%;top:67%;--r:-2deg" data-i18n="t50">Open days</span>
+      <span class="n n--far" style="left:40%;top:62%;--r:4deg" data-i18n="t51">Advice</span>
+      <span class="n" style="left:64%;top:68%;--r:-3deg" data-i18n="t52">Personal statements</span>
+      <span class="n n--doc" style="left:86%;top:62%;--r:6deg">scholarships_list.xlsx</span>
+      <span class="n n--far" style="left:27%;top:88%;--r:3deg" data-i18n="t53">What my friends are doing</span>
+      <span class="n" style="left:55%;top:89%;--r:-5deg" data-i18n="t54">Opinions</span>
+      <span class="n n--far" style="left:80%;top:87%;--r:-4deg" data-i18n="t55">Course lists</span>
+    </div>
+
+    <div class="focus">
+      <h3 data-reveal data-i18n="t56">The difficult part is knowing <em data-mark>what actually applies to you.</em></h3>
+      <ul class="applies" data-stagger>
+        <li><i aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></i><span data-i18n="t57">Which options make sense.</span></li>
+        <li><i aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></i><span data-i18n="t58">What deserves your attention now.</span></li>
+        <li><i aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></i><span data-i18n="t59">What can wait.</span></li>
+        <li><i aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></i><span data-i18n="t60">What your next step should actually be.</span></li>
+      </ul>
+    </div>
+    <div class="btns center focus-cta" data-reveal><a class="btn" href="/book" data-page data-fallback="#book"><span data-i18n="t5">Book a consultation</span> <span class="arrow" aria-hidden="true">→</span></a></div>
+  </div>
+</section>
+
+<!-- ============ 05 DESEJO — as perguntas encaixam-se num plano ============
+     Dados da interface = MOCKUP ilustrativo, nunca dados reais de um aluno. -->
+<section class="plan" id="plan" aria-labelledby="plan-title">
+  <div class="plan-pin">
+    <div class="wrap">
+      <div class="plan-head">
+        <span class="tag" data-reveal data-i18n="t61">Your plan</span>
+        <h2 class="t-l" id="plan-title" data-reveal data-i18n="t62">What if, instead of more questions, you had a plan?</h2>
+      </div>
+
+      <div class="plan-canvas">
+        <div class="aura" aria-hidden="true"></div>
+
+        <div class="plan-mobile-qs" aria-hidden="true">
+          <span class="q glass" data-i18n="t9">Which course?</span><span class="q glass" data-i18n="t10">Which university?</span><span class="q glass" data-i18n="t11">My grades?</span><span class="q glass" data-i18n="t12">Deadlines?</span><span class="q glass" data-i18n="t13">Scholarships?</span><span class="q glass" data-i18n="t14">What should I do next?</span>
+        </div>
+
+        <div class="app glass" aria-label="Illustrative example of a university plan">
+          <div class="app-top">
+            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap"><b data-i18n="t63">Your university plan</b><span class="example" data-i18n="t64">Example</span></div>
+            <div class="who" aria-label="Shared by student and parents"><span>S</span><span>P</span></div>
+          </div>
+          <div class="tiles">
+            <div class="tile tile--next" data-slot="next">
+              <span class="mono" data-i18n="t65">Next step</span>
+              <span class="val" data-i18n="t66">Review university options</span>
+              <span class="cap" data-i18n="t67">Know what your next step should be.</span>
+            </div>
+            <div class="tile tile--c1" data-slot="deadline">
+              <span class="mono" data-i18n="t68">Deadline</span>
+              <span class="val" data-i18n="t69">Application — 15 January</span>
+              <span class="cap" data-i18n="t70">Keep track of the deadlines that matter to you.</span>
+            </div>
+            <div class="tile tile--c2" data-slot="options">
+              <span class="mono" data-i18n="t71">Your options</span>
+              <span class="val" data-i18n="t72">6 universities shortlisted</span>
+              <span class="cap" data-i18n="t73">Know which universities are worth exploring.</span>
+            </div>
+            <div class="tile" data-slot="now">
+              <span class="mono" data-i18n="t74">Right now</span>
+              <span class="val" data-i18n="t75">Compare 2 course areas</span>
+              <div class="progress" aria-hidden="true"><i></i></div>
+              <span class="cap" data-i18n="t76">Understand what you should be working on right now.</span>
+            </div>
+            <div class="tile tile--c3" data-slot="opps">
+              <span class="mono" data-i18n="t77">Opportunities</span>
+              <span class="val" data-i18n="t78">3 scholarships to look into</span>
+              <span class="cap" data-i18n="t79">Know which opportunities to look for.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- perguntas soltas que voam para dentro do plano (desktop) -->
+        <div class="plan-q" data-to="now"      style="left:4%;top:8%"><span class="q glass" style="transform:rotate(-4deg)" data-i18n="t9">Which course?</span></div>
+        <div class="plan-q" data-to="options"  style="left:84%;top:4%"><span class="q glass" style="transform:rotate(3deg)" data-i18n="t10">Which university?</span></div>
+        <div class="plan-q" data-to="options"  style="left:-2%;top:56%"><span class="q glass" style="transform:rotate(3deg)" data-i18n="t11">My grades?</span></div>
+        <div class="plan-q" data-to="deadline" style="left:90%;top:46%"><span class="q glass q--hot" style="transform:rotate(-3deg)" data-i18n="t12">Deadlines?</span></div>
+        <div class="plan-q" data-to="opps"     style="left:14%;top:92%"><span class="q glass" style="transform:rotate(-2deg)" data-i18n="t13">Scholarships?</span></div>
+        <div class="plan-q" data-to="next"     style="left:70%;top:94%"><span class="q glass" style="transform:rotate(2deg)" data-i18n="t14">What should I do next?</span></div>
+      </div>
+
+      <p class="plan-end" data-plan-end data-i18n="t80">That’s the clarity we help you build<span>.</span></p>
+      <div class="btns center plan-cta"><a class="btn" href="/book" data-page data-fallback="#book"><span data-i18n="t5">Book a consultation</span> <span class="arrow" aria-hidden="true">→</span></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 SOLUÇÃO ============ -->
+<section class="section solution band-dark theme-dark" id="solution" aria-labelledby="solution-title">
+  <div class="aura" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="stack center">
+      <span class="tag" data-reveal>The University Launchpad</span>
+      <h2 class="t-l center" id="solution-title" data-reveal data-i18n="t81">Personal guidance for students and families navigating the journey to university.</h2>
+      <p class="lede" data-reveal data-i18n="t82">From understanding your options and choosing universities to managing deadlines, applications, scholarships and important decisions, we help make the process clearer, more organised and easier to navigate.</p>
+      <p class="decide" data-reveal data-i18n="t83">You make the decisions. <span>We help you make sense of them.</span></p>
+      <div class="btns center" style="margin-top:12px" data-reveal><a class="btn btn--ghost" href="#how-we-help"><span data-i18n="t84">How we can help</span> <span class="arrow" aria-hidden="true">→</span></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 09 CYNTHIA ============ -->
+<section class="section" id="about" aria-labelledby="about-title">
+  <div class="wrap">
+    <h2 class="t-l philo" id="about-title" data-reveal data-i18n="t128">This isn’t about telling students what to do.</h2>
+    <p class="philo-sub" data-reveal data-i18n="t129">It’s about helping them understand their options well enough to make their own decisions.</p>
+
+    <div class="portrait" data-reveal>
+      <div class="aura" aria-hidden="true"></div>
+      <!-- PENDENTE: fotografia real da Cynthia (horizontal, luz natural, próxima e acessível). Vai como background deste bloco. -->
+      <div class="photo-slot"><img class="slot-img" src="img/cynthia-placeholder.jpg" alt="Placeholder portrait" loading="lazy" onerror="this.remove()"><span class="pending ph-flag">Placeholder photo</span><div><span class="pending">Photo pending</span><p>Portrait of Cynthia — natural light, approachable, not corporate.</p></div></div>
+      <div class="about-card glass">
+        <h3 data-i18n="t130">Hi, I’m Cynthia.</h3>
+        <!-- PENDENTE: conteúdo da Cynthia. Não inventar. -->
+        <div class="slots">
+          <div class="slot slot--wide"><b>Short story</b>Why Cynthia does this work, in her own words.</div>
+          <div class="slot"><b>Experience</b>To be confirmed.</div>
+          <div class="slot"><b>Education</b>To be confirmed.</div>
+          <div class="slot"><b>Credentials</b>To be confirmed.</div>
+          <div class="slot"><b>How I work</b>To be confirmed.</div>
+        </div>
+        <div class="btns"><a class="btn btn--sm" href="/book" data-page data-fallback="#book"><span data-i18n="t5">Book a consultation</span> <span class="arrow" aria-hidden="true">→</span></a><a class="link" href="/about" data-page data-fallback="#about" style="margin-left:8px"><span data-i18n="t131">Meet Cynthia</span> <span class="arrow" aria-hidden="true">→</span></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 07 BENEFÍCIOS — bento ============ -->
+<section class="section band-tint" id="how-we-help" aria-labelledby="help-title">
+  <div class="wrap">
+    <h2 class="t-l" id="help-title" style="max-width:16ch" data-reveal data-i18n="t85">So, what can we actually help you with?</h2>
+    <div class="bento" data-stagger>
+      <article class="b b--7 b--tall">
+        <div class="aura" aria-hidden="true"></div>
+        <span class="mono" data-i18n="t86">Course</span>
+        <h3 data-i18n="t87">Choosing the right course</h3>
+        <p data-i18n="t88">Find a direction that fits your interests, strengths and goals.</p>
+        <div class="b-ui" aria-hidden="true">
+          <span class="chip glass"><i></i><span data-i18n="t89">Interests</span></span>
+          <span class="chip glass"><i></i><span data-i18n="t90">Strengths</span></span>
+          <span class="chip glass"><i></i><span data-i18n="t91">Goals</span></span>
+          <span class="chip glass chip--on"><i></i><span data-i18n="t92">Direction</span></span>
+        </div>
+      </article>
+      <article class="b b--5 b--tall">
+        <span class="mono" data-i18n="t20">Universities</span>
+        <h3 data-i18n="t93">Finding the right universities</h3>
+        <p data-i18n="t94">Understand which options make sense for your profile and plans.</p>
+        <div class="b-ui" aria-hidden="true">
+          <div class="rows">
+            <div class="row row--on"><span data-i18n="t95">Option A</span> <em data-i18n="t98">fits</em></div>
+            <div class="row"><span data-i18n="t96">Option B</span> <em data-i18n="t98">fits</em></div>
+            <div class="row" style="color:var(--faint)"><span data-i18n="t97">Option C</span> <em data-i18n="t99">review</em></div>
+          </div>
+        </div>
+      </article>
+      <article class="b b--4 b--flat">
+        <span class="mono" data-i18n="t100">Requirements</span>
+        <h3 data-i18n="t101">Understanding entry requirements</h3>
+        <p data-i18n="t102">Know what universities expect and what you need to prepare.</p>
+      </article>
+      <article class="b b--4">
+        <span class="mono" data-i18n="t103">Planning</span>
+        <h3 data-i18n="t104">Planning ahead</h3>
+        <p data-i18n="t105">Know what deserves your attention now and what comes later.</p>
+      </article>
+      <article class="b b--4 b--flat b--full-md">
+        <span class="mono" data-i18n="t106">Applications</span>
+        <h3 data-i18n="t107">Managing applications &amp; deadlines</h3>
+        <p data-i18n="t108">Stay organised throughout the process.</p>
+      </article>
+      <article class="b b--5">
+        <span class="mono" data-i18n="t26">Scholarships</span>
+        <h3 data-i18n="t109">Exploring scholarships</h3>
+        <p data-i18n="t110">Understand which opportunities may be available to you.</p>
+      </article>
+      <article class="b b--7">
+        <span class="mono" data-i18n="t111">Decision</span>
+        <h3 data-i18n="t112">Making the final decision</h3>
+        <p data-i18n="t113">Compare your options and make your choice with greater clarity.</p>
+        <div class="b-ui" aria-hidden="true">
+          <div class="vs">
+            <div><span data-i18n="t95">Option A</span><div class="bar"><i style="width:78%"></i></div></div>
+            <b>VS</b>
+            <div><span data-i18n="t96">Option B</span><div class="bar"><i style="width:56%"></i></div></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 07b CTA A MEIO ============ -->
+<section class="mid-cta" id="goal" aria-labelledby="goal-title">
+  <div class="wrap">
+    <div class="final-card theme-dark mid-card">
+      <div class="aura" aria-hidden="true"></div>
+      <div class="mid-copy">
+        <span class="tag" data-reveal data-i18n="m0">Aiming high?</span>
+        <h2 id="goal-title" data-reveal data-i18n="m1">Have a university in mind? <span>We’ll help you work out the way in.</span></h2>
+        <p data-reveal data-i18n="m2">Entry requirements, applications, deadlines: we map out what it takes and walk the path with you.</p>
+        <div class="btns" data-reveal><a class="btn" href="/book" data-page data-fallback="#book"><span data-i18n="t5">Book a consultation</span> <span class="arrow" aria-hidden="true">→</span></a></div>
+      </div>
+      <div class="route" aria-label="Illustrative example of a route to a university" data-stagger>
+        <div class="route-step glass"><i class="ok"></i><span><span class="mono" data-i18n="m3">Step 1</span><b data-i18n="m4">Entry requirements checked</b></span></div>
+        <div class="route-step glass"><i class="ok"></i><span><span class="mono" data-i18n="m5">Step 2</span><b data-i18n="m6">Application ready</b></span></div>
+        <div class="route-step glass"><i></i><span><span class="mono" data-i18n="m7">Step 3</span><b data-i18n="t69">Application — 15 January</b></span></div>
+        <div class="route-step route-goal glass"><i class="goal"></i><span><span class="mono" data-i18n="m8">Goal</span><b data-i18n="m9">Your university</b></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 08 SERVIÇOS ============ -->
+<section class="section" id="services" aria-labelledby="services-title">
+  <div class="wrap">
+    <div class="stack">
+      <span class="tag" data-reveal data-i18n="t114">Choose your level of support</span>
+      <h2 class="t-l" id="services-title" data-reveal data-i18n="t115">How much support do you need?</h2>
+    </div>
+    <!-- Preços: não adicionar ainda. -->
+    <div class="svc-grid" data-stagger>
+      <article class="svc svc--main svc--c1">
+        <span class="tag" data-i18n="t116">One-to-one</span>
+        <h3 data-i18n="t1">Personal Consulting</h3>
+        <p data-i18n="t117">Personal guidance for students and families who want Cynthia by their side throughout the process.</p>
+        <a class="link" href="/personal-consulting" data-page data-fallback="#book"><span data-i18n="t118">Explore Personal Consulting</span> <span class="arrow" aria-hidden="true">→</span></a>
+        <!-- PENDENTE: foto provisória (Unsplash). -->
+        <div class="svc-photo">
+          <img src="img/consulting-desk.jpg" alt="A calm desk with a laptop" loading="lazy" onerror="this.remove()">
+          <div class="session glass" aria-hidden="true">
+            <div class="who"><span data-i18n="t119">You</span><span>C</span></div>
+            <div><span class="mono" data-i18n="t116">One-to-one</span><b data-i18n="t120">You + Cynthia</b></div>
+          </div>
+        </div>
+      </article>
+      <article class="svc svc--side svc--c2">
+        <span class="tag" data-i18n="t121">Ongoing access</span>
+        <div class="shelf" aria-hidden="true"><span style="--w:70%"></span><span style="--w:45%"></span><span style="--w:58%"></span></div>
+        <h3>The Launchpad Membership</h3>
+        <p data-i18n="t122">Resources, information and ongoing support to help you stay informed and on track.</p>
+        <a class="link" href="/membership" data-page data-fallback="#book"><span data-i18n="t123">Explore Membership</span> <span class="arrow" aria-hidden="true">→</span></a>
+      </article>
+      <article class="svc svc--side svc--c3">
+        <span class="tag" data-i18n="t124">Finding direction</span>
+        <div class="strengths" aria-hidden="true"><i style="height:38%"></i><i style="height:64%"></i><i class="on" style="height:100%"></i><i style="height:52%"></i><i style="height:30%"></i><i style="height:44%"></i></div>
+        <h3 data-i18n="t125">Morrisby Profile</h3>
+        <p data-i18n="t126">For students who want to better understand their strengths, interests and possible directions before deciding what comes next.</p>
+        <a class="link" href="/morrisby" data-page data-fallback="#book"><span data-i18n="t127">Explore Morrisby</span> <span class="arrow" aria-hidden="true">→</span></a>
+      </article>
+    </div>
+    <div class="cta-strip" data-reveal>
+      <p data-i18n="n2">Not sure which one fits you? Let’s work it out together.</p>
+      <a class="btn" href="/book" data-page data-fallback="#book"><span data-i18n="t5">Book a consultation</span> <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10 PROVA SOCIAL ============ -->
+<section class="section" id="stories" aria-labelledby="stories-title" style="padding-top:0">
+  <div class="wrap">
+    <div class="stories-top">
+      <h2 class="t-l" id="stories-title" style="max-width:15ch" data-reveal data-i18n="t132">Real students. Real decisions. Real stories.</h2>
+      <span class="pending" data-reveal>Stories pending approval</span>
+    </div>
+    <!-- PENDENTE: histórias reais com autorização. Candidato 1: família do Jules. -->
+    <div class="cases">
+      <article class="case" data-reveal>
+        <div class="case-who"><div class="avatar"><img src="img/avatar-1.jpg" alt="" loading="lazy" onerror="this.remove()">Photo</div><div><b>Student name</b><br><small>University · course</small></div></div>
+        <div class="case-story">
+          <div class="stage"><span class="mono" data-i18n="t133">When we first met…</span><p>Where the student and family were at the start.</p></div>
+          <div class="stage"><span class="mono" data-i18n="t134">Together we…</span><p>What we worked on and decided together.</p></div>
+          <div class="stage"><span class="mono" data-i18n="t135">Today…</span><p>Where they are now, in their words.</p></div>
+        </div>
+      </article>
+      <article class="case">
+        <div class="case-who"><div class="avatar"><img src="img/avatar-2.jpg" alt="" loading="lazy" onerror="this.remove()">Photo</div><div><b>Student name</b><br><small>University · course</small></div></div>
+        <div class="case-story">
+          <div class="stage"><span class="mono" data-i18n="t133">When we first met…</span><p>Where the student and family were at the start.</p></div>
+          <div class="stage"><span class="mono" data-i18n="t134">Together we…</span><p>What we worked on and decided together.</p></div>
+          <div class="stage"><span class="mono" data-i18n="t135">Today…</span><p>Where they are now, in their words.</p></div>
+        </div>
+      </article>
+      <article class="case">
+        <div class="case-who"><div class="avatar"><img src="img/avatar-3.jpg" alt="" loading="lazy" onerror="this.remove()">Photo</div><div><b>Student name</b><br><small>University · course</small></div></div>
+        <div class="case-story">
+          <div class="stage"><span class="mono" data-i18n="t133">When we first met…</span><p>Where the student and family were at the start.</p></div>
+          <div class="stage"><span class="mono" data-i18n="t134">Together we…</span><p>What we worked on and decided together.</p></div>
+          <div class="stage"><span class="mono" data-i18n="t135">Today…</span><p>Where they are now, in their words.</p></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 11 FAQ ============ -->
+<section class="section faq" id="faq" aria-labelledby="faq-title" style="padding-top:0">
+  <div class="wrap">
+    <div class="container">
+      <div class="stack">
+        <span class="tag" data-reveal data-i18n="t136">Questions</span>
+        <h2 class="t-l" id="faq-title" data-reveal data-i18n="t137">Still have questions? That’s completely normal.</h2>
+        <p class="small" data-reveal data-i18n="n3">Didn’t find your question here? Ask Cynthia directly.</p>
+        <div data-reveal><a class="btn" href="/book" data-page data-fallback="#book"><span data-i18n="t5">Book a consultation</span> <span class="arrow" aria-hidden="true">→</span></a></div>
+      </div>
+      <!-- PENDENTE: respostas a escrever com a Cynthia. -->
+      <div class="faq-list" data-reveal>
+        <div class="faq-item">
+          <button class="faq-q" type="button" id="faq-q1" aria-expanded="false" aria-controls="faq-a1"><span data-i18n="t138">What if I don’t know what I want to study yet?</span><span class="pm" aria-hidden="true"></span></button>
+          <div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-q1"><div><div class="inner"><span class="pending">Answer pending</span><p>To be written with Cynthia.</p></div></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" id="faq-q2" aria-expanded="false" aria-controls="faq-a2"><span data-i18n="t139">When should I start planning for university?</span><span class="pm" aria-hidden="true"></span></button>
+          <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2"><div><div class="inner"><span class="pending">Answer pending</span><p>To be written with Cynthia.</p></div></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" id="faq-q3" aria-expanded="false" aria-controls="faq-a3"><span data-i18n="t140">Can you help me choose between different universities?</span><span class="pm" aria-hidden="true"></span></button>
+          <div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-q3"><div><div class="inner"><span class="pending">Answer pending</span><p>To be written with Cynthia.</p></div></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" id="faq-q4" aria-expanded="false" aria-controls="faq-a4"><span data-i18n="t141">How do I know whether I need consulting or the membership?</span><span class="pm" aria-hidden="true"></span></button>
+          <div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4"><div><div class="inner"><span class="pending">Answer pending</span><p>To be written with Cynthia, together with the pricing model.</p></div></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" id="faq-q5" aria-expanded="false" aria-controls="faq-a5"><span data-i18n="t142">Can parents be involved in the process?</span><span class="pm" aria-hidden="true"></span></button>
+          <div class="faq-a" id="faq-a5" role="region" aria-labelledby="faq-q5"><div><div class="inner"><span class="pending">Answer pending</span><p>To be written with Cynthia.</p></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 12 CTA FINAL ============ -->
+<section class="final" id="book" aria-labelledby="final-title">
+  <div class="wrap">
+    <div class="final-card theme-dark">
+      <img class="final-bg" src="img/final-texture.jpg" alt="" loading="lazy" onerror="this.remove()">
+      <div class="aura" aria-hidden="true"></div>
+      <div class="next-widget glass" data-reveal aria-hidden="true"><i></i><div><span class="mono" data-i18n="t65">Next step</span><b data-i18n="t5">Book a consultation</b></div></div>
+      <h2 id="final-title" data-reveal data-i18n="t143">You don’t need to have everything figured out. <span>You just need a next step.</span></h2>
+      <p data-reveal data-i18n="t144">Let’s understand where you are, where you want to go and what makes sense from here.</p>
+      <!-- PENDENTE: destino do agendamento (/book, Calendly ou WhatsApp) -->
+      <div class="btns center" data-reveal>
+        <a class="btn" href="/book" data-page data-fallback="#book"><span data-i18n="t5">Book a consultation</span> <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn--ghost" href="#how-we-help" data-i18n="t145">Explore how we can help</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="logo" href="#top"><span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 2.5 21 20.5 12 15.6 3 20.5Z" fill="currentColor"/><path d="M12 2.5 21 20.5 12 15.6Z" fill="var(--accent)"/></svg></span>The University Launchpad</a>
+        <p data-i18n="t146">Helping students and families make sense of what comes next.</p>
+      </div>
+      <div class="foot-col">
+        <h4 data-i18n="t147">Navigate</h4>
+        <ul>
+          <li><a href="#how-we-help" data-i18n="t0">How We Help</a></li>
+          <li><a href="/about" data-page data-fallback="#about" data-i18n="t148">About Cynthia</a></li>
+          <li><a href="/for-universities" data-page data-fallback="#top" data-i18n="t149">For Universities</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4 data-i18n="t150">Services</h4>
+        <ul>
+          <li><a href="/personal-consulting" data-page data-fallback="#services" data-i18n="t1">Personal Consulting</a></li>
+          <li><a href="/membership" data-page data-fallback="#services" data-i18n="t2">Membership</a></li>
+          <li><a href="/morrisby" data-page data-fallback="#services" data-i18n="t125">Morrisby Profile</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4 data-i18n="t4">Resources</h4>
+        <ul>
+          <li><a href="/resources" data-page data-fallback="#faq" data-i18n="t151">Articles</a></li>
+          <li><a href="#faq" data-i18n="t152">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4 data-i18n="t153">Contact</h4>
+        <!-- PENDENTE: email, WhatsApp e redes sociais reais -->
+        <ul>
+          <li><a href="/book" data-page data-fallback="#book" data-i18n="t5">Book a consultation</a></li>
+          <li><span class="pending">Email pending</span></li>
+          <li><span class="pending">Social pending</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 The University Launchpad</span>
+      <nav aria-label="Legal">
+        <a href="/privacy" data-page data-fallback="#top" data-i18n="t154">Privacy policy</a>
+        <a href="/terms" data-page data-fallback="#top" data-i18n="t155">Terms</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-book" id="mobile-book" aria-hidden="true">
+  <a class="btn" href="/book" data-page data-fallback="#book" tabindex="-1"><span data-i18n="t5">Book a consultation</span> <span class="arrow" aria-hidden="true">→</span></a>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+/* Traduções PT (Portugal) e ES. O inglês é o texto original do HTML. */
+const I18N = {
+"pt": {
+"t0": "Como ajudamos",
+"t1": "Consultoria Personalizada",
+"t2": "Subscrição",
+"t3": "Sobre",
+"t4": "Recursos",
+"t5": "Marcar consulta",
+"t6": "A universidade é uma grande decisão. <span class=\"grey\">Não tens de descobrir tudo sozinho.</span>",
+"t7": "Ajudamos estudantes e famílias a perceber as suas opções, a tomar decisões informadas e a construir um plano claro para o que vem a seguir.",
+"t8": "Descobre como podemos ajudar",
+"t9": "Que curso?",
+"t10": "Que universidade?",
+"t11": "As minhas notas?",
+"t12": "Prazos?",
+"t13": "Bolsas?",
+"t14": "E agora, o que faço?",
+"t15": "Para estudantes",
+"t16": "Chega uma altura em que o “logo se vê” começa a parecer perto demais.",
+"t17": "Quanto mais perto está a universidade, mais perguntas parecem surgir.",
+"t18": "a escrever…",
+"t19": "O que devo estudar?",
+"t20": "Universidades",
+"t21": "Que universidades devo considerar?",
+"t22": "Notas",
+"t23": "As minhas notas são suficientes?",
+"t24": "Calendário",
+"t25": "Quando devo começar a candidatar-me?",
+"t26": "Bolsas",
+"t27": "Será que consigo uma bolsa?",
+"t28": "A grande dúvida",
+"t29": "E se eu fizer a escolha errada?",
+"t30": "Para pais",
+"t31": "E se és pai ou mãe, provavelmente tens outras perguntas.",
+"t32": "Estamos a começar a tempo?",
+"t33": "Há oportunidades que nos estão a escapar?",
+"t34": "Que universidades fazem mesmo sentido?",
+"t35": "Como posso ajudar sem pôr mais pressão?",
+"t36": "Estamos a fazer tudo o que devíamos?",
+"t37": "Estudantes",
+"t38": "Pais",
+"t39": "Como posso ajudar?",
+"t40": "Perguntas diferentes.<span>O mesmo objetivo.</span>",
+"t41": "Fazer as escolhas certas para o que vem a seguir.",
+"t42": "O problema não é falta de informação.",
+"t43": "Sites de universidades, rankings, guias de candidatura, prazos, vídeos, opiniões, conselhos… Há mais informação disponível do que nunca.",
+"t44": "Sites das universidades",
+"t45": "Guias de candidatura",
+"t46": "Prazos",
+"t47": "Vídeos",
+"t48": "“Devias ir para Medicina”",
+"t49": "Fóruns",
+"t50": "Dias abertos",
+"t51": "Conselhos",
+"t52": "Cartas de motivação",
+"t53": "O que os meus amigos estão a fazer",
+"t54": "Opiniões",
+"t55": "Listas de cursos",
+"t56": "O difícil é saber <em data-mark>o que se aplica mesmo a ti.</em>",
+"t57": "Que opções fazem sentido.",
+"t58": "O que merece a tua atenção agora.",
+"t59": "O que pode esperar.",
+"t60": "Qual deve ser, de facto, o teu próximo passo.",
+"t61": "O teu plano",
+"t62": "E se, em vez de mais perguntas, tivesses um plano?",
+"t63": "O teu plano para a universidade",
+"t64": "Exemplo",
+"t65": "Próximo passo",
+"t66": "Rever opções de universidades",
+"t67": "Saber qual deve ser o teu próximo passo.",
+"t68": "Prazo",
+"t69": "Candidatura — 15 de janeiro",
+"t70": "Acompanhar os prazos que importam para ti.",
+"t71": "As tuas opções",
+"t72": "6 universidades selecionadas",
+"t73": "Saber que universidades vale a pena explorar.",
+"t74": "Agora",
+"t75": "Comparar 2 áreas de estudo",
+"t76": "Perceber no que deves estar a trabalhar agora.",
+"t77": "Oportunidades",
+"t78": "3 bolsas para explorar",
+"t79": "Saber que oportunidades procurar.",
+"t80": "É essa a clareza que te ajudamos a construir<span>.</span>",
+"t81": "Orientação personalizada para estudantes e famílias no caminho até à universidade.",
+"t82": "Desde perceber as tuas opções e escolher universidades até gerir prazos, candidaturas, bolsas e decisões importantes, ajudamos a tornar o processo mais claro, mais organizado e mais fácil de navegar.",
+"t83": "As decisões são tuas. <span>Nós ajudamos-te <span style=\"white-space:nowrap\">a dar-lhes sentido.</span></span>",
+"t84": "Como podemos ajudar",
+"t85": "Então, em que é que podemos mesmo ajudar?",
+"t86": "Curso",
+"t87": "Escolher o curso certo",
+"t88": "Encontra uma direção que combine com os teus interesses, pontos fortes e objetivos.",
+"t89": "Interesses",
+"t90": "Pontos fortes",
+"t91": "Objetivos",
+"t92": "Direção",
+"t93": "Encontrar as universidades certas",
+"t94": "Percebe que opções fazem sentido para o teu perfil e os teus planos.",
+"t95": "Opção A",
+"t96": "Opção B",
+"t97": "Opção C",
+"t98": "encaixa",
+"t99": "rever",
+"t100": "Requisitos",
+"t101": "Perceber os requisitos de entrada",
+"t102": "Sabe o que as universidades esperam e o que precisas de preparar.",
+"t103": "Planeamento",
+"t104": "Planear com antecedência",
+"t105": "Sabe o que merece a tua atenção agora e o que fica para depois.",
+"t106": "Candidaturas",
+"t107": "Gerir candidaturas e prazos",
+"t108": "Mantém-te organizado ao longo de todo o processo.",
+"t109": "Explorar bolsas",
+"t110": "Percebe que oportunidades podem estar ao teu alcance.",
+"t111": "Decisão",
+"t112": "Tomar a decisão final",
+"t113": "Compara as tuas opções e faz a tua escolha com mais clareza.",
+"t114": "Escolhe o teu nível de apoio",
+"t115": "De quanto apoio precisas?",
+"t116": "Individual",
+"t117": "Orientação personalizada para estudantes e famílias que querem a Cynthia ao seu lado durante todo o processo.",
+"t118": "Conhecer a Consultoria Personalizada",
+"t119": "Tu",
+"t120": "Tu + Cynthia",
+"t121": "Acesso contínuo",
+"t122": "Recursos, informação e apoio contínuo para te manteres informado e no caminho certo.",
+"t123": "Conhecer a Subscrição",
+"t124": "Encontrar direção",
+"t125": "Perfil Morrisby",
+"t126": "Para estudantes que querem perceber melhor os seus pontos fortes, interesses e possíveis caminhos antes de decidirem o que vem a seguir.",
+"t127": "Conhecer o Morrisby",
+"t128": "Não se trata de dizer aos estudantes o que fazer.",
+"t129": "Trata-se de os ajudar a perceber as suas opções o suficiente para tomarem as suas próprias decisões.",
+"t130": "Olá, sou a Cynthia.",
+"t131": "Conhecer a Cynthia",
+"t132": "Estudantes reais. Decisões reais. Histórias reais.",
+"t133": "Quando nos conhecemos…",
+"t134": "Juntos, nós…",
+"t135": "Hoje…",
+"t136": "Perguntas",
+"t137": "Ainda tens dúvidas? É completamente normal.",
+"t138": "E se eu ainda não souber o que quero estudar?",
+"t139": "Quando devo começar a planear a universidade?",
+"t140": "Podem ajudar-me a escolher entre várias universidades?",
+"t141": "Como sei se preciso da consultoria ou da subscrição?",
+"t142": "Os pais podem participar no processo?",
+"t143": "Não precisas de ter tudo resolvido. <span>Só precisas de um próximo passo.</span>",
+"t144": "Vamos perceber onde estás, onde queres chegar e o que faz sentido a partir daqui.",
+"t145": "Ver como podemos ajudar",
+"t146": "Ajudamos estudantes e famílias a dar sentido ao que vem a seguir.",
+"t147": "Navegar",
+"t148": "Sobre a Cynthia",
+"t149": "Para universidades",
+"t150": "Serviços",
+"t151": "Artigos",
+"t152": "Perguntas frequentes",
+"t153": "Contacto",
+"t154": "Política de privacidade",
+"t155": "Termos"
+},
+"es": {
+"t0": "Cómo ayudamos",
+"t1": "Consultoría Personalizada",
+"t2": "Membresía",
+"t3": "Sobre mí",
+"t4": "Recursos",
+"t5": "Reservar una consulta",
+"t6": "La universidad es una gran decisión. <span class=\"grey\">No tienes que resolverlo todo tú solo.</span>",
+"t7": "Ayudamos a estudiantes y familias a entender sus opciones, tomar decisiones informadas y construir un plan claro para lo que viene.",
+"t8": "Descubre cómo podemos ayudarte",
+"t9": "¿Qué carrera?",
+"t10": "¿Qué universidad?",
+"t11": "¿Mis notas?",
+"t12": "¿Plazos?",
+"t13": "¿Becas?",
+"t14": "¿Y ahora qué hago?",
+"t15": "Para estudiantes",
+"t16": "Llega un momento en que el “ya lo veré más adelante” empieza a sentirse demasiado cerca.",
+"t17": "Cuanto más cerca está la universidad, más preguntas parecen aparecer.",
+"t18": "escribiendo…",
+"t19": "¿Qué debería estudiar?",
+"t20": "Universidades",
+"t21": "¿Qué universidades debería considerar?",
+"t22": "Notas",
+"t23": "¿Mis notas son suficientes?",
+"t24": "Calendario",
+"t25": "¿Cuándo debería empezar a presentar solicitudes?",
+"t26": "Becas",
+"t27": "¿Podría conseguir una beca?",
+"t28": "La gran duda",
+"t29": "¿Y si me equivoco al elegir?",
+"t30": "Para padres",
+"t31": "Y si eres madre o padre, probablemente tengas otras preguntas.",
+"t32": "¿Estamos empezando con suficiente antelación?",
+"t33": "¿Nos estamos perdiendo alguna oportunidad?",
+"t34": "¿Qué universidades tienen sentido de verdad?",
+"t35": "¿Cómo puedo ayudar sin añadir más presión?",
+"t36": "¿Estamos haciendo todo lo que deberíamos?",
+"t37": "Estudiantes",
+"t38": "Padres",
+"t39": "¿Cómo puedo ayudar?",
+"t40": "Preguntas distintas.<span>El mismo objetivo.</span>",
+"t41": "Tomar las decisiones correctas para lo que viene.",
+"t42": "El problema no es la falta de información.",
+"t43": "Webs de universidades, rankings, guías de solicitud, plazos, vídeos, opiniones, consejos… Hay más información disponible que nunca.",
+"t44": "Webs de universidades",
+"t45": "Guías de solicitud",
+"t46": "Plazos",
+"t47": "Vídeos",
+"t48": "“Deberías estudiar Medicina”",
+"t49": "Foros",
+"t50": "Jornadas de puertas abiertas",
+"t51": "Consejos",
+"t52": "Cartas de motivación",
+"t53": "Lo que hacen mis amigos",
+"t54": "Opiniones",
+"t55": "Listas de carreras",
+"t56": "Lo difícil es saber <em data-mark>qué se aplica realmente a ti.</em>",
+"t57": "Qué opciones tienen sentido.",
+"t58": "Qué merece tu atención ahora.",
+"t59": "Qué puede esperar.",
+"t60": "Cuál debería ser realmente tu siguiente paso.",
+"t61": "Tu plan",
+"t62": "¿Y si, en lugar de más preguntas, tuvieras un plan?",
+"t63": "Tu plan para la universidad",
+"t64": "Ejemplo",
+"t65": "Siguiente paso",
+"t66": "Revisar opciones de universidades",
+"t67": "Saber cuál debería ser tu siguiente paso.",
+"t68": "Plazo",
+"t69": "Solicitud — 15 de enero",
+"t70": "Controlar los plazos que te importan.",
+"t71": "Tus opciones",
+"t72": "6 universidades preseleccionadas",
+"t73": "Saber qué universidades vale la pena explorar.",
+"t74": "Ahora mismo",
+"t75": "Comparar 2 áreas de estudio",
+"t76": "Entender en qué deberías estar trabajando ahora.",
+"t77": "Oportunidades",
+"t78": "3 becas para explorar",
+"t79": "Saber qué oportunidades buscar.",
+"t80": "Esa es la claridad que te ayudamos a construir<span>.</span>",
+"t81": "Orientación personalizada para estudiantes y familias en el camino hacia la universidad.",
+"t82": "Desde entender tus opciones y elegir universidades hasta gestionar plazos, solicitudes, becas y decisiones importantes, te ayudamos a que el proceso sea más claro, más organizado y más fácil de recorrer.",
+"t83": "Las decisiones las tomas tú. <span>Nosotros te ayudamos a entenderlas.</span>",
+"t84": "Cómo podemos ayudarte",
+"t85": "Entonces, ¿en qué podemos ayudarte realmente?",
+"t86": "Carrera",
+"t87": "Elegir la carrera adecuada",
+"t88": "Encuentra una dirección que encaje con tus intereses, fortalezas y objetivos.",
+"t89": "Intereses",
+"t90": "Fortalezas",
+"t91": "Objetivos",
+"t92": "Dirección",
+"t93": "Encontrar las universidades adecuadas",
+"t94": "Entiende qué opciones tienen sentido para tu perfil y tus planes.",
+"t95": "Opción A",
+"t96": "Opción B",
+"t97": "Opción C",
+"t98": "encaja",
+"t99": "revisar",
+"t100": "Requisitos",
+"t101": "Entender los requisitos de acceso",
+"t102": "Sabe qué esperan las universidades y qué necesitas preparar.",
+"t103": "Planificación",
+"t104": "Planificar con antelación",
+"t105": "Sabe qué merece tu atención ahora y qué viene después.",
+"t106": "Solicitudes",
+"t107": "Gestionar solicitudes y plazos",
+"t108": "Mantente organizado durante todo el proceso.",
+"t109": "Explorar becas",
+"t110": "Entiende qué oportunidades pueden estar a tu alcance.",
+"t111": "Decisión",
+"t112": "Tomar la decisión final",
+"t113": "Compara tus opciones y elige con más claridad.",
+"t114": "Elige tu nivel de apoyo",
+"t115": "¿Cuánto apoyo necesitas?",
+"t116": "Individual",
+"t117": "Orientación personalizada para estudiantes y familias que quieren a Cynthia a su lado durante todo el proceso.",
+"t118": "Conocer la Consultoría Personalizada",
+"t119": "Tú",
+"t120": "Tú + Cynthia",
+"t121": "Acceso continuo",
+"t122": "Recursos, información y apoyo continuo para que estés informado y vayas al día.",
+"t123": "Conocer la Membresía",
+"t124": "Encontrar dirección",
+"t125": "Perfil Morrisby",
+"t126": "Para estudiantes que quieren entender mejor sus fortalezas, intereses y posibles caminos antes de decidir qué viene después.",
+"t127": "Conocer Morrisby",
+"t128": "No se trata de decirles a los estudiantes qué hacer.",
+"t129": "Se trata de ayudarles a entender sus opciones lo suficiente como para tomar sus propias decisiones.",
+"t130": "Hola, soy Cynthia.",
+"t131": "Conoce a Cynthia",
+"t132": "Estudiantes reales. Decisiones reales. Historias reales.",
+"t133": "Cuando nos conocimos…",
+"t134": "Juntos…",
+"t135": "Hoy…",
+"t136": "Preguntas",
+"t137": "¿Todavía tienes dudas? Es completamente normal.",
+"t138": "¿Y si todavía no sé qué quiero estudiar?",
+"t139": "¿Cuándo debería empezar a planificar la universidad?",
+"t140": "¿Podéis ayudarme a elegir entre varias universidades?",
+"t141": "¿Cómo sé si necesito la consultoría o la membresía?",
+"t142": "¿Pueden participar los padres en el proceso?",
+"t143": "No necesitas tenerlo todo resuelto. <span>Solo necesitas un siguiente paso.</span>",
+"t144": "Veamos dónde estás, adónde quieres llegar y qué tiene sentido a partir de aquí.",
+"t145": "Ver cómo podemos ayudarte",
+"t146": "Ayudamos a estudiantes y familias a entender lo que viene.",
+"t147": "Navegar",
+"t148": "Sobre Cynthia",
+"t149": "Para universidades",
+"t150": "Servicios",
+"t151": "Artículos",
+"t152": "Preguntas frecuentes",
+"t153": "Contacto",
+"t154": "Política de privacidad",
+"t155": "Términos"
+}
+};
+
+Object.assign(I18N.pt, {
+  e0:"Estudar na Europa", e1:"Estás a pensar estudar na Europa? <span>Podemos <span style=\"white-space:nowrap\">ajudar-te</span> a chegar lá.</span>",
+  e2:"Países diferentes, sistemas diferentes, prazos diferentes. Ajudamos-te a perceber as tuas opções e a planear a mudança.",
+  m0:"Com um objetivo em mente?", m1:"Tens uma universidade em mente? <span>Ajudamos-te a perceber o caminho até lá.</span>",
+  m2:"Requisitos de entrada, candidaturas, prazos: mapeamos o que é preciso e fazemos o percurso contigo.",
+  m3:"Passo 1", m4:"Requisitos de entrada verificados", m5:"Passo 2", m6:"Candidatura pronta", m7:"Passo 3", m8:"Objetivo", m9:"A tua universidade",
+  v1:"Introdução", v2:"Conhece a Cynthia e a forma como trabalhamos",
+  n1:"Soa-te familiar? Vamos falar sobre isso.",
+  n2:"Não sabes qual se adequa a ti? Vamos descobrir juntos.",
+  n3:"Não encontraste a tua pergunta? Pergunta diretamente à Cynthia."
+});
+Object.assign(I18N.es, {
+  e0:"Estudiar en Europa", e1:"¿Estás pensando en estudiar en Europa? <span>Podemos ayudarte a llegar.</span>",
+  e2:"Países distintos, sistemas distintos, plazos distintos. Te ayudamos a entender tus opciones y a planificar el paso.",
+  m0:"¿Con un objetivo en mente?", m1:"¿Tienes una universidad en mente? <span>Te ayudamos a ver el camino para llegar.</span>",
+  m2:"Requisitos de acceso, solicitudes, plazos: trazamos lo que hace falta y lo recorremos contigo.",
+  m3:"Paso 1", m4:"Requisitos de acceso revisados", m5:"Paso 2", m6:"Solicitud lista", m7:"Paso 3", m8:"Objetivo", m9:"Tu universidad",
+  v1:"Introducción", v2:"Conoce a Cynthia y cómo trabajamos",
+  n1:"¿Te suena? Hablemos de ello.",
+  n2:"¿No sabes cuál encaja contigo? Lo vemos juntos.",
+  n3:"¿No encuentras tu pregunta? Pregúntale directamente a Cynthia."
+});
+
+/* Chinês simplificado (zh-Hans) */
+I18N.zh = {
+"e0": "在欧洲读书",
+"e1": "想去欧洲读大学？<span>我们帮你走到那一步。</span>",
+"e2": "不同的国家，不同的体系，不同的截止日期。我们帮你看清自己的选择，规划好这一步。",
+"m0": "目标明确？",
+"m1": "心里已经有想去的大学了？<span>我们帮你找到进去的路。</span>",
+"m2": "入学要求、申请材料、截止日期：我们帮你理清需要做什么，并陪你一起走完。",
+"m3": "第 1 步",
+"m4": "入学要求已核对",
+"m5": "第 2 步",
+"m6": "申请材料已就绪",
+"m7": "第 3 步",
+"m8": "目标",
+"m9": "你的大学",
+"n1": "听起来很熟悉？我们来聊聊。",
+"n2": "不确定哪种适合你？我们一起来看。",
+"n3": "没找到你的问题？直接问 Cynthia。",
+"t0": "我们如何帮助你",
+"t1": "一对一咨询",
+"t2": "会员计划",
+"t3": "关于",
+"t4": "资源",
+"t5": "预约咨询",
+"t6": "上大学是一个重大的决定。<span class=\"grey\">你不必一个人想清楚所有事情。</span>",
+"t7": "我们帮助学生和家庭了解自己的选择，做出明智的决定，并为接下来的路制定清晰的计划。",
+"t8": "看看我们能如何帮你",
+"t9": "读什么专业？",
+"t10": "选哪所大学？",
+"t11": "我的成绩够吗？",
+"t12": "截止日期？",
+"t13": "奖学金？",
+"t14": "接下来该做什么？",
+"t15": "写给学生",
+"t16": "总有一天，“以后再说”会开始显得太近了。",
+"t17": "离上大学越近，问题似乎就越多。",
+"t18": "正在输入…",
+"t19": "我应该学什么？",
+"t20": "大学",
+"t21": "我应该考虑哪些大学？",
+"t22": "成绩",
+"t23": "我的成绩够好吗？",
+"t24": "时间",
+"t25": "我什么时候开始申请？",
+"t26": "奖学金",
+"t27": "我能拿到奖学金吗？",
+"t28": "最大的疑问",
+"t29": "如果我选错了怎么办？",
+"t42": "问题不在于信息太少。",
+"t43": "大学官网、排名、申请指南、截止日期、视频、各种意见和建议…… 如今能找到的信息比以往任何时候都多。",
+"t44": "大学官网",
+"t45": "申请指南",
+"t46": "截止日期",
+"t47": "视频",
+"t48": "“你应该去学医”",
+"t49": "论坛",
+"t50": "开放日",
+"t51": "建议",
+"t52": "个人陈述",
+"t53": "朋友们都在做什么",
+"t54": "意见",
+"t55": "专业列表",
+"t56": "难的是弄清楚<em data-mark>哪些真正适用于你。</em>",
+"t57": "哪些选择是合理的。",
+"t58": "现在最值得关注的是什么。",
+"t59": "哪些可以先放一放。",
+"t60": "你的下一步到底应该是什么。",
+"t61": "你的计划",
+"t62": "如果你手上不是更多问题，而是一份计划呢？",
+"t63": "你的升学计划",
+"t64": "示例",
+"t65": "下一步",
+"t66": "查看大学选项",
+"t67": "知道你的下一步是什么。",
+"t68": "截止日期",
+"t69": "申请截止 — 1 月 15 日",
+"t70": "跟进对你重要的截止日期。",
+"t71": "你的选择",
+"t72": "已初选 6 所大学",
+"t73": "知道哪些大学值得深入了解。",
+"t74": "现在",
+"t75": "比较 2 个专业方向",
+"t76": "明白你现在应该专注做什么。",
+"t77": "机会",
+"t78": "3 项奖学金待了解",
+"t79": "知道该留意哪些机会。",
+"t80": "这就是我们帮你建立的清晰感<span>。</span>",
+"t81": "为走向大学之路的学生和家庭提供个性化指导。",
+"t82": "从了解你的选择、挑选大学，到管理截止日期、申请、奖学金和重要决定，我们让整个过程更清晰、更有条理、更容易应对。",
+"t83": "决定由你来做。<span>我们帮你把它们想清楚。</span>",
+"t84": "我们如何帮助你",
+"t85": "那么，我们具体能帮你做什么？",
+"t86": "专业",
+"t87": "选择合适的专业",
+"t88": "找到符合你兴趣、优势和目标的方向。",
+"t89": "兴趣",
+"t90": "优势",
+"t91": "目标",
+"t92": "方向",
+"t93": "找到合适的大学",
+"t94": "了解哪些选择适合你的背景和计划。",
+"t95": "选项 A",
+"t96": "选项 B",
+"t97": "选项 C",
+"t98": "合适",
+"t99": "待定",
+"t100": "要求",
+"t101": "了解入学要求",
+"t102": "知道大学的期望，以及你需要准备什么。",
+"t103": "规划",
+"t104": "提前规划",
+"t105": "知道现在该关注什么，什么可以晚点再说。",
+"t106": "申请",
+"t107": "管理申请与截止日期",
+"t108": "在整个过程中保持有条不紊。",
+"t109": "了解奖学金",
+"t110": "了解你可能获得的机会。",
+"t111": "决定",
+"t112": "做出最终决定",
+"t113": "比较你的选择，更清楚地做出决定。",
+"t114": "选择你需要的支持程度",
+"t115": "你需要多少支持？",
+"t116": "一对一",
+"t117": "为希望 Cynthia 全程陪伴的学生和家庭提供个性化指导。",
+"t118": "了解一对一咨询",
+"t119": "你",
+"t120": "你 + Cynthia",
+"t121": "持续支持",
+"t122": "资源、信息和持续的支持，帮你随时掌握情况、不掉队。",
+"t123": "了解会员计划",
+"t124": "找到方向",
+"t125": "Morrisby 测评",
+"t126": "适合想在决定下一步之前，更好地了解自己优势、兴趣和可能方向的学生。",
+"t127": "了解 Morrisby",
+"t128": "这不是在告诉学生该做什么。",
+"t129": "而是帮助他们充分了解自己的选择，从而自己做决定。",
+"t130": "你好，我是 Cynthia。",
+"t131": "认识 Cynthia",
+"t132": "真实的学生。真实的决定。真实的故事。",
+"t133": "我们刚认识时……",
+"t134": "我们一起……",
+"t135": "如今……",
+"t136": "常见问题",
+"t137": "还有疑问？这很正常。",
+"t138": "如果我还不知道想学什么怎么办？",
+"t139": "我应该什么时候开始规划上大学？",
+"t140": "你们能帮我在几所大学之间做选择吗？",
+"t141": "我怎么知道自己需要一对一咨询还是会员计划？",
+"t142": "家长可以参与这个过程吗？",
+"t143": "你不需要什么都想清楚。<span>你只需要下一步。</span>",
+"t144": "我们一起看看你现在在哪里、想去哪里，以及接下来怎么走才合理。",
+"t145": "看看我们能如何帮你",
+"t146": "帮助学生和家庭看清接下来的路。",
+"t147": "导航",
+"t148": "关于 Cynthia",
+"t149": "合作大学",
+"t150": "服务",
+"t151": "文章",
+"t152": "常见问题",
+"t153": "联系",
+"t154": "隐私政策",
+"t155": "条款",
+"v1": "介绍",
+"v2": "认识 Cynthia，了解我们如何工作"
+};
+
+/* Quando as páginas internas existirem no servidor, mudar para true. */
+const PAGES_LIVE = false;
+
+(function(){
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+  /* ---- Links para páginas ainda não construídas → âncoras na Home ---- */
+  if(!PAGES_LIVE){
+    document.querySelectorAll('a[data-page]').forEach(a => a.setAttribute('href', a.dataset.fallback || '#top'));
+  }
+
+  /* ---- Scroll lock central (padrão da agência) ---- */
+  let _lockCount = 0, _lockY = 0;
+  function lockScroll(){
+    if(_lockCount++ === 0){
+      _lockY = window.scrollY;
+      document.body.style.position = 'fixed';
+      document.body.style.top = -_lockY + 'px';
+      document.body.style.width = '100%';
+    }
+  }
+  function unlockScroll(){
+    if(--_lockCount <= 0){
+      _lockCount = 0;
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      window.scrollTo(0, _lockY);
+    }
+  }
+
+  /* ---- Menu mobile ---- */
+  const menuBtn = document.querySelector('.menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  /* ---- Header: vidro quando o conteúdo passa por baixo ---- */
+  const header = document.querySelector('.header');
+  const darkZones = document.querySelectorAll('.theme-dark');
+  const onScroll = () => {
+    header.classList.toggle('is-scrolled', window.scrollY > 10);
+    const y = header.getBoundingClientRect().top + 30;
+    let dark = false;
+    darkZones.forEach(z => { const r = z.getBoundingClientRect(); if(r.top <= y && r.bottom >= y) dark = true; });
+    header.classList.toggle('on-dark', dark && menu.hidden);
+  };
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  function setMenu(open, target){
+    if(open === !menu.hidden) return;
+    menu.hidden = !open;
+    document.documentElement.classList.toggle('menu-open', open);
+    onScroll();
+    header.classList.toggle('is-scrolled', open || window.scrollY > 10);
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    if(open){ lockScroll(); } else {
+      unlockScroll();
+      if(target){ const el = document.querySelector(target); if(el) el.scrollIntoView({behavior: reduce ? 'auto' : 'smooth'}); }
+    }
+  }
+  menuBtn.addEventListener('click', () => setMenu(menu.hidden));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', e => {
+    const href = a.getAttribute('href');
+    if(href && href.startsWith('#')){ e.preventDefault(); setMenu(false, href); } else { setMenu(false); }
+  }));
+  document.addEventListener('keydown', e => { if(e.key === 'Escape' && !menu.hidden) setMenu(false); });
+  window.addEventListener('resize', () => { if(window.innerWidth > 1060 && !menu.hidden) setMenu(false); });
+
+  /* ---- Botão fixo "Book a consultation" no telemóvel ---- */
+  const mBook = document.getElementById('mobile-book');
+  const heroEl = document.querySelector('.hero');
+  const finalEl = document.getElementById('book');
+  const onBook = () => {
+    const pastHero = heroEl.getBoundingClientRect().bottom < 0;
+    const atFinal = finalEl.getBoundingClientRect().top < window.innerHeight * .9;
+    const on = pastHero && !atFinal && menu.hidden;
+    mBook.classList.toggle('is-on', on);
+    mBook.setAttribute('aria-hidden', String(!on));
+    mBook.querySelector('a').tabIndex = on ? 0 : -1;
+  };
+  onBook(); window.addEventListener('scroll', onBook, {passive:true});
+
+  /* ---- FAQ ---- */
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.faq-q[aria-expanded="true"]').forEach(b => b.setAttribute('aria-expanded','false'));
+      btn.setAttribute('aria-expanded', String(!open));
+    });
+  });
+
+  /* ---- Idioma: EN (original do HTML) / PT / ES ---- */
+  const LANGS = {en:{code:'EN', html:'en-GB'}, pt:{code:'PT', html:'pt-PT'}, es:{code:'ES', html:'es'}, zh:{code:'中文', html:'zh-Hans'}};
+  const i18nNodes = Array.from(document.querySelectorAll('[data-i18n]'));
+  const original = new Map(i18nNodes.map(el => [el, el.innerHTML]));
+  const langBtn = document.querySelector('.lang-btn');
+  const langMenu = document.getElementById('lang-menu');
+  let currentLang = 'en';
+  function applyLang(lang, save){
+    if(!LANGS[lang]) lang = 'en';
+    currentLang = lang;
+    const lit = !!document.querySelector('[data-mark].is-lit');
+    i18nNodes.forEach(el => {
+      const t = lang === 'en' ? null : (I18N[lang] || {})[el.dataset.i18n];
+      el.innerHTML = t != null ? t : original.get(el);
+    });
+    if(lit) document.querySelectorAll('[data-mark]').forEach(m => m.classList.add('is-lit'));
+    try{ prepType(typeSeen || reduce); }catch(e){ /* ainda não inicializado no arranque */ }
+    document.documentElement.lang = LANGS[lang].html;
+    document.querySelector('.lang-code').textContent = LANGS[lang].code;
+    langMenu.querySelectorAll('[data-lang]').forEach(b => b.setAttribute('aria-checked', String(b.dataset.lang === lang)));
+    if(save){ try{ localStorage.setItem('tul-lang', lang); }catch(e){} }
+    if(window.ScrollTrigger) requestAnimationFrame(() => ScrollTrigger.refresh());
+  }
+  function setLangMenu(open){
+    langMenu.hidden = !open;
+    langBtn.setAttribute('aria-expanded', String(open));
+  }
+  langBtn.addEventListener('click', e => { e.stopPropagation(); setLangMenu(langMenu.hidden); });
+  langMenu.addEventListener('click', e => {
+    const b = e.target.closest('[data-lang]'); if(!b) return;
+    applyLang(b.dataset.lang, true); setLangMenu(false); langBtn.focus();
+  });
+  document.addEventListener('click', e => { if(!langMenu.hidden && !e.target.closest('.lang')) setLangMenu(false); });
+  document.addEventListener('keydown', e => { if(e.key === 'Escape' && !langMenu.hidden){ setLangMenu(false); langBtn.focus(); } });
+  // Idioma inicial: escolha guardada → idioma do navegador → inglês
+  let initial = null;
+  try{ initial = localStorage.getItem('tul-lang'); }catch(e){}
+  if(!initial){ const nav = (navigator.language || 'en').slice(0,2).toLowerCase(); initial = LANGS[nav] ? nav : 'en'; }
+  if(initial !== 'en') applyLang(initial, false);
+
+  /* ---- Digitação: a última palavra é escrita e o cursor fica a piscar ---- */
+  const typeEl = document.querySelector('[data-type]');
+  const typeCard = typeEl && typeEl.closest('.thought');
+  let typeTimer = null, typeSeen = false;
+  function prepType(run){
+    if(!typeEl) return;
+    clearInterval(typeTimer);
+    if(!typeEl.querySelector('.caret')) typeEl.dataset.full = typeEl.textContent.replace(/\s+$/,'');
+    const full = typeEl.dataset.full;
+    let cut = full.lastIndexOf(' ') + 1;
+    if(cut === 0) cut = Math.max(0, full.length - 4);
+    const head = full.slice(0, cut), word = full.slice(cut);
+    typeEl.textContent = '';
+    const h = document.createTextNode(head), t = document.createElement('span'), c = document.createElement('span');
+    c.className = 'caret'; c.setAttribute('aria-hidden','true');
+    typeEl.append(h, t, c); typeEl.setAttribute('aria-label', full);
+    if(reduce || !run){ t.textContent = run ? word : ''; if(run) typeCard.classList.add('is-typed'); return; }
+    typeCard.classList.remove('is-typed');
+    let i = 0;
+    setTimeout(() => {
+      typeTimer = setInterval(() => {
+        t.textContent = word.slice(0, ++i);
+        if(i >= word.length){ clearInterval(typeTimer); typeCard.classList.add('is-typed'); }
+      }, 140);
+    }, 500);
+  }
+  if(typeEl){
+    prepType(reduce);
+    if(!reduce && 'IntersectionObserver' in window){
+      const tio = new IntersectionObserver(es => es.forEach(en => { if(en.isIntersecting && !typeSeen){ typeSeen = true; prepType(true); tio.disconnect(); } }), {threshold:.6});
+      tio.observe(typeEl);
+    } else { prepType(true); }
+  }
+
+  /* ---- Card de vídeo ---- */
+  const vcard = document.querySelector('.video-card');
+  if(vcard){
+    const startVideo = () => {
+      const src = vcard.dataset.video;
+      if(!src){ vcard.querySelector('.video-flag').animate([{transform:'scale(1)'},{transform:'scale(1.08)'},{transform:'scale(1)'}],{duration:450}); return; }
+      if(vcard.querySelector('video')) return;
+      const v = document.createElement('video');
+      v.src = src; v.controls = true; v.playsInline = true; v.autoplay = true;
+      vcard.appendChild(v); vcard.classList.add('is-playing'); v.play().catch(()=>{});
+    };
+    vcard.addEventListener('click', startVideo);
+  }
+
+  /* ---- Vidro reage ao cursor (reflexo) ---- */
+  if(finePointer && !reduce){
+    document.addEventListener('pointermove', e => {
+      const g = e.target.closest && e.target.closest('.glass');
+      if(!g) return;
+      const r = g.getBoundingClientRect();
+      g.style.setProperty('--gx', (e.clientX - r.left) + 'px');
+      g.style.setProperty('--gy', (e.clientY - r.top) + 'px');
+    }, {passive:true});
+  }
+
+  /* ---- Sublinhado de foco ---- */
+  const marks = document.querySelectorAll('[data-mark]');
+  if(reduce || !('IntersectionObserver' in window)){ marks.forEach(m => m.classList.add('is-lit')); }
+  else {
+    const io = new IntersectionObserver(es => es.forEach(en => {
+      if(en.isIntersecting){ setTimeout(() => en.target.classList.add('is-lit'), 300); io.unobserve(en.target); }
+    }), {threshold:.8});
+    marks.forEach(m => io.observe(m));
+  }
+
+  if(reduce || !window.gsap) return;
+  gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.config({ ignoreMobileResize: true });
+
+  /* Hero */
+  gsap.timeline({defaults:{ease:'power3.out'}})
+    .from('[data-hero]', {y:26, opacity:0, duration:.9, stagger:.1})
+    .from('.hero .floater', {opacity:0, scale:.92, duration:.8, stagger:.08}, '-=.6');
+
+  /* Hero: perguntas reagem ao cursor (parallax subtil) */
+  if(finePointer && window.innerWidth > 1180){
+    const floaters = gsap.utils.toArray('.hero .floater').map(el => ({
+      d: parseFloat(el.dataset.depth) || 10,
+      x: gsap.quickTo(el, 'x', {duration:1.2, ease:'power3.out'}),
+      y: gsap.quickTo(el, 'y', {duration:1.2, ease:'power3.out'})
+    }));
+    document.querySelector('.hero').addEventListener('pointermove', e => {
+      const nx = e.clientX / window.innerWidth - .5, ny = e.clientY / window.innerHeight - .5;
+      floaters.forEach(f => { f.x(nx * f.d); f.y(ny * f.d); });
+    });
+  }
+
+  /* Reveals */
+  gsap.utils.toArray('[data-reveal]').forEach(el => {
+    gsap.from(el, {y:30, opacity:0, duration:.9, ease:'power3.out', scrollTrigger:{trigger:el, start:'top 88%', once:true}});
+  });
+  gsap.utils.toArray('[data-stagger]').forEach(g => {
+    gsap.from(g.children, {y:24, opacity:0, duration:.8, stagger:.07, ease:'power3.out', scrollTrigger:{trigger:g, start:'top 86%', once:true}});
+  });
+
+  /* Excesso de informação: chega desordenado */
+  gsap.from('.noise .n', {
+    x:() => gsap.utils.random(-80, 80), y:() => gsap.utils.random(-40, 40), opacity:0,
+    duration:1, ease:'power2.out', stagger:{each:.04, from:'random'},
+    scrollTrigger:{trigger:'.noise', start:'top 80%', once:true}
+  });
+
+  /* ===== DNA: as perguntas soltas encaixam-se no plano (desktop) =====
+     SEM pin de propósito: a secção fica sempre no seu lugar na página;
+     a animação só acompanha o scroll enquanto o plano atravessa o ecrã. */
+  const mm = gsap.matchMedia();
+  mm.add('(min-width: 900px)', () => {
+    const canvas = document.querySelector('.plan-canvas');
+    const qs = gsap.utils.toArray('.plan-q');
+    const tiles = gsap.utils.toArray('.plan .tile');
+    const endLine = document.querySelectorAll('[data-plan-end], .plan-cta');
+    const target = (q, axis) => {
+      const tile = canvas.querySelector('[data-slot="' + q.dataset.to + '"]');
+      const c = canvas.getBoundingClientRect(), t = tile.getBoundingClientRect();
+      const tx = t.left - c.left + t.width / 2, ty = t.top - c.top + t.height / 2;
+      const qx = q.offsetLeft + q.offsetWidth / 2, qy = q.offsetTop + q.offsetHeight / 2;
+      return axis === 'x' ? tx - qx : ty - qy;
+    };
+
+    gsap.set(tiles, {opacity:.18, scale:.97});
+    gsap.set(endLine, {opacity:0, y:12});
+
+    const tl = gsap.timeline({
+      defaults:{ease:'power2.inOut'},
+      scrollTrigger:{trigger:'.plan-canvas', start:'center 88%', end:'center 42%', scrub:.6, invalidateOnRefresh:true}
+    });
+    tl.to(qs, {x:(i, q) => target(q,'x'), y:(i, q) => target(q,'y'), scale:.8, duration:1, stagger:.06})
+      .to(qs, {opacity:0, duration:.3, stagger:.03}, '-=.3')
+      .to(tiles, {opacity:1, scale:1, duration:.5, stagger:.06, ease:'power2.out'}, '<')
+      .to(endLine, {opacity:1, y:0, duration:.4, ease:'power2.out'}, '-=.1')
+      .to({}, {duration:.3});
+    return () => { gsap.set([qs, tiles, endLine], {clearProps:'all'}); };
+  });
+
+  /* Recalcular posições sempre que a altura da página muda (fonte web a carregar,
+     troca de idioma, imagens) — senão a secção fixada começa no sítio errado. */
+  let _rt;
+  const refreshSoon = () => { clearTimeout(_rt); _rt = setTimeout(() => ScrollTrigger.refresh(), 150); };
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(refreshSoon);
+  window.addEventListener('load', refreshSoon);
+})();
+</script>
+</body>
+</html>
